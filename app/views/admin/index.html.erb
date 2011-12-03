@@ -1,0 +1,10 @@
+<table>
+<% @eqpfamilies.each do |eqpfamily| %>
+	<tr>
+		<td><%= eqpfamily.name %></td>
+		<td><%= link_to 'Показать', :action => 'eqpgroup_index', :id => eqpfamily.id %>
+	</tr>
+<% end %>
+</table>
+<br>
+<%= link_to 'Добавить', :action => 'eqpfamily_new' %>

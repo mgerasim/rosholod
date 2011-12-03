@@ -1,0 +1,4 @@
+<%= form_for @eqpgroup, :url => { :action => :eqpgroup_create, :id => @id } do |form| %>
+	<p>Наименование: <%= form.text_field :name, :size => 30 %></p>
+	<p><%= form.submit "Добавить"  %></p>
+<% end %>
