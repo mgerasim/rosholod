@@ -39,3 +39,5 @@ end
 group :production, :staging do
   gem 'pg'
 end
+
+gem 'taps'
