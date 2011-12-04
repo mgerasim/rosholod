@@ -1,8 +1,12 @@
+<%= link_to 'Семейство', :action => 'index' %>
 <table>
 <% @eqpfamilies.each do |eqpfamily| %>
 	<tr>
-		<td><%= eqpfamily.name %></td>
-		<td><%= link_to 'Показать', :action => 'eqpgroup_index', :id => eqpfamily.id %>
+	<td><%= eqpfamily.name %></td>
+		<td><%= link_to 'Показать', :action => 'eqpfamily_show', :id => eqpfamily.id %>
+		<td><%= link_to 'Редактировать', :action => 'eqpfamily_edit', :id => eqpfamily.id %>
+		<td><%= link_to 'Удалить', { :action => 'eqpfamily_destroy', :id => eqpfamily.id }, :confirm => 'Вы уверены?', :method => :post  %></td>
+		<td><%= link_to 'Вверх', :action => 'eqpfamily_moveup', :id => eqpfamily.id %></td>
 	</tr>
 <% end %>
 </table>

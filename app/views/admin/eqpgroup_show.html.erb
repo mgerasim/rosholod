@@ -1,0 +1,18 @@
+<%= link_to 'Семейство', :action => 'index' %>
+<%= link_to 'Группа', :action => 'eqpfamily_show', :id => @eqpgroup.eqpfamily %>
+<%= link_to 'Тип', :action => 'eqpgroup_show', :id => @eqpgroup, :eqpfamily_id => @eqpgroup.eqpfamily %>
+<h1><%= @eqpgroup.name %></h1>
+<br>
+<table>
+	<% @eqpgroup.eqptypes.each do |eqptype| %>
+	<tr>
+		<td><%= eqptype.name %></td>
+		<td><%= link_to 'Показать', :action => 'eqptype_show', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id  %>
+		<td><%= link_to 'Редактировать', :action => 'eqptype_edit', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id  %>
+		<td><%= link_to 'Удалить', { :action => 'eqptype_destroy', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id }, :confirm => 'Вы уверены?', :method => :post  %></td>
+		<td><%= link_to 'Вверх', :action => 'eqptype_moveup', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id %></td>
+	</tr>
+	<% end %>
+</table>
+<br>
+<%= link_to 'Добавить', :action => 'eqptype_new', :id => @eqpgroup.id %>

@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111203095832) do
+ActiveRecord::Schema.define(:version => 20111204094356) do
 
   create_table "eqpfamilies", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "indx"
   end
 
   create_table "eqpgroups", :force => true do |t|
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20111203095832) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "eqpfamily_id"
+    t.integer  "indx"
   end
 
   create_table "eqps", :force => true do |t|
@@ -39,12 +41,16 @@ ActiveRecord::Schema.define(:version => 20111203095832) do
     t.string   "v4"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "eqptype_id"
+    t.integer  "indx"
   end
 
   create_table "eqptypes", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "eqpgroup_id"
+    t.integer  "indx"
   end
 
 end

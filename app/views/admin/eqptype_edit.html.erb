@@ -1,0 +1,5 @@
+Форма
+<%= form_for @eqptype, :url => { :action => :eqptype_update, :eqpgroup_id => @eqpgroup.id, :id => @eqptype.id } do |form| %>
+	<p>Наименование: <%= form.text_field :name, :size => 30 %></p>
+	<p><%= form.submit "Изменить"  %></p>
+<% end %>
