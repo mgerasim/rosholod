@@ -42,7 +42,7 @@ end
 
 group :production, :staging do
 
-#  gem 'pg'
+  gem 'pg' -- --with-pg-config=/usr/local/pgsql/bin/pg_config
 end
 
 gem 'taps'
