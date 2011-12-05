@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111204094356) do
+ActiveRecord::Schema.define(:version => 20111205040605) do
 
   create_table "eqpfamilies", :force => true do |t|
     t.string   "name"
@@ -51,6 +51,13 @@ ActiveRecord::Schema.define(:version => 20111204094356) do
     t.datetime "updated_at"
     t.integer  "eqpgroup_id"
     t.integer  "indx"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
