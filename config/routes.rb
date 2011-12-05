@@ -1,4 +1,6 @@
 Rosholod::Application.routes.draw do
+  get "pages/home"
+
   resources :users
 
   # The priority is based upon order of creation:

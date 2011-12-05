@@ -30,8 +30,8 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 
-#gem 'execjs'
-#gem 'therubyracer'
+gem 'execjs'
+gem 'therubyracer'
 
 group :development, :test do
   # Pretty printed test output
