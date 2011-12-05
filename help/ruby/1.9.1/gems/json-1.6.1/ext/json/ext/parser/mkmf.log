@@ -1,0 +1,34 @@
+have_header: checking for re.h... -------------------- no
+
+"gcc -o conftest -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/include     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -O3 -Wall conftest.c  -L. -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib/lib -Wl,-R/usr/local/lib/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/usr/local/lib -L/usr/local/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -E -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/include     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -O3 -Wall  conftest.c -o conftest.i"
+conftest.c:3:16: fatal error: re.h: Нет такого файла или каталога
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <re.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/st.h... -------------------- yes
+
+"gcc -E -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/include     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC -O3 -Wall  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/st.h>
+/* end */
+
+--------------------
+
