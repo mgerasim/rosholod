@@ -46,3 +46,5 @@ group :production, :staging do
 end
 
 gem 'taps'
+
+gem 'thin'
