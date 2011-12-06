@@ -3,7 +3,9 @@
 <head>
   <title>Rosholod</title>
   <%= csrf_meta_tag %>
-  <%= stylesheet_link_tag "blueprint/screen", :cache => false %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag "application", :cache => false %>
 </head>
 <body>
