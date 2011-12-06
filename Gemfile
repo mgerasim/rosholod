@@ -38,6 +38,7 @@ group :development, :test do
   gem 'turn', '0.8.2', :require => false
   gem 'sqlite3-ruby', '1.3.0', :require => 'sqlite3'
   gem 'sqlite3'
+  gem 'rspec-rails', '2.6.1'
 end
 
 group :production, :staging do
