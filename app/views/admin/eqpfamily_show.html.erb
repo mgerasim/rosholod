@@ -7,6 +7,7 @@
 	<% @eqpfamily.eqpgroups.each do |eqpgroup| %>
 	<tr>
 		<td><%= eqpgroup.name %></td>
+		<td><%= eqpgroup.pn %></td>
 		<td><%= link_to 'Показать', :action => 'eqpgroup_show', :eqpfamily_id => @eqpfamily.id, :id => eqpgroup.id  %>
 		<td><%= link_to 'Редактировать', :action => 'eqpgroup_edit', :eqpfamily_id => @eqpfamily.id, :id => eqpgroup.id  %>
 		<td><%= link_to 'Удалить', { :action => 'eqpgroup_destroy', :eqpfamily_id => @eqpfamily.id, :id => eqpgroup.id }, :confirm => 'Вы уверены?', :method => :post  %></td>

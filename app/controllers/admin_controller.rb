@@ -1,5 +1,7 @@
+#encoding: utf-8
 class AdminController < ApplicationController
 	def index
+		@title = "Администрирование"
 		@eqpfamilies = Eqpfamily.find(:all, :order => 'indx')
 		@eqpfamilies.each do |eqpfamily|
 			eqpfamily.indx = @eqpfamilies.index(eqpfamily)
@@ -22,6 +24,7 @@ class AdminController < ApplicationController
 	end
 
 	def eqpfamily_new
+		@title = "Добавление элемента бокового меню"
 		@eqpfamily = Eqpfamily.new
 		respond_to do |format|
       		format.html # new.html.erb
@@ -30,6 +33,7 @@ class AdminController < ApplicationController
 	end
 
 	def eqpfamily_show
+		@title = "Просмотр элементов бокового меню"
 		@eqpfamily = Eqpfamily.find(params[:id])
 		@eqpfamily.eqpgroups.each do |eqpgroup|
 			eqpgroup.indx = @eqpfamily.eqpgroups.index(eqpgroup)
@@ -39,6 +43,7 @@ class AdminController < ApplicationController
 	end
 
 	def eqpfamily_edit
+		@title = "Редактирование элемента бокового меню"
 		@eqpfamily = Eqpfamily.find(params[:id])
 	end
 
@@ -79,6 +84,7 @@ class AdminController < ApplicationController
 	
 
 	def eqpgroup_new
+		@title = "Добавление элемента бокового меню второго уровня"
 		@eqpgroup = Eqpgroup.new
 		@id = params[:id]
 	end
@@ -132,11 +138,13 @@ class AdminController < ApplicationController
 	end
 
 	def eqpgroup_show
+		@title = "Просмотр элемента бокового меню второго уровня"
 		@eqpfamily = Eqpfamily.find(params[:eqpfamily_id])
 		@eqpgroup = Eqpgroup.find(params[:id])
 	end
 
 	def eqpgroup_edit
+		@title = "Редактирование элемента бокового меню второго уровня"
 		@eqpfamily = Eqpfamily.find(params[:eqpfamily_id])
 		@eqpgroup = Eqpgroup.find(params[:id])
 	end
@@ -145,6 +153,7 @@ class AdminController < ApplicationController
 # Типы
 #
 	def eqptype_new
+		@title = "Добавление типа товара"
 		@eqptype = Eqptype.new
 		@id = params[:id]
 	end
@@ -198,11 +207,13 @@ class AdminController < ApplicationController
 	end
 
 	def eqptype_show
+		@title = "Просмотр типа товара"
 		@eqpgroup = Eqpgroup.find(params[:eqpgroup_id])
 		@eqptype = Eqptype.find(params[:id])
 	end
 
 	def eqptype_edit
+		@title = "Редактирование типа товара"
 		@eqpgroup = Eqpgroup.find(params[:eqpgroup_id])
 		@eqptype = Eqptype.find(params[:id])
 	end
@@ -212,8 +223,15 @@ class AdminController < ApplicationController
 #
 
 	def eqp_new
+		@title = "Добавление нового товара"
 		@eqp = Eqp.new
 		@id = Eqptype.find(params[:id])
+		eqptype = @id;
+		eqpgroup = Eqpgroup.find(eqptype.eqpgroup)
+		@p1 = eqpgroup.p1
+		@p2 = eqptype.eqpgroup.p2
+		@p3 = eqptype.eqpgroup.p3
+		@p4 = eqptype.eqpgroup.p4
 	end
 
 	def eqp_create
@@ -265,11 +283,13 @@ class AdminController < ApplicationController
 	end
 
 	def eqp_show
+		@title = "Просмот товаров"
 		@eqptype = Eqptype.find(params[:eqptype_id])
 		@eqp = Eqp.find(params[:id])
 	end
 
 	def eqp_edit
+		@title = "Редактирование товара"
 		@eqptype = Eqptype.find(params[:eqptype_id])
 		@eqp = Eqp.find(params[:id])
 	end
