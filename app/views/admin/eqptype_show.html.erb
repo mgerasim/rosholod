@@ -8,6 +8,9 @@
 	<% @eqptype.eqps.each do |eqp| %>
 	<tr>
 		<td><%= eqp.name %></td>
+		<td><%= link_to 'Редактировать', :action => 'eqp_edit', :id => eqp.id  %>
+		<td><%= link_to 'Удалить', { :action => 'eqp_destroy', :id => eqp.id }, :confirm => 'Вы уверены?', :method => :post  %></td>
+		<td><%= link_to 'Вверх', :action => 'eqp_moveup', :id => eqp.id %></td>
 	</tr>
 	<% end %>
 </table>

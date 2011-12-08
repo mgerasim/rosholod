@@ -141,6 +141,11 @@ class AdminController < ApplicationController
 		@title = "Просмотр элемента бокового меню второго уровня"
 		@eqpfamily = Eqpfamily.find(params[:eqpfamily_id])
 		@eqpgroup = Eqpgroup.find(params[:id])
+		@eqpgroup.eqptypes.each do |eqptype|
+			eqptype.indx = @eqpgroup.eqptypes.index(eqptype)
+			eqptype.indx = eqptype.indx * 2
+			eqptype.save
+		end
 	end
 
 	def eqpgroup_edit
@@ -183,8 +188,8 @@ class AdminController < ApplicationController
 	end
 
 	def eqptype_moveup
-		@eqpgroup = Eqpgroup.find(params[:eqpgroup_id])
 		@eqptype = Eqptype.find(params[:id])
+		@eqpgroup = @eqptype.eqpgroup
 		@eqptype.indx = @eqptype.indx - 3
 		@eqptype.save
 		respond_to do |format|
@@ -208,8 +213,13 @@ class AdminController < ApplicationController
 
 	def eqptype_show
 		@title = "Просмотр типа товара"
-		@eqpgroup = Eqpgroup.find(params[:eqpgroup_id])
 		@eqptype = Eqptype.find(params[:id])
+		@eqpgroup = @eqptype.eqpgroup;
+		@eqptype.eqps.each do |eqp|
+			eqp.indx = @eqptype.eqps.index(eqp)
+			eqp.indx = eqp.indx * 2
+			eqp.save
+		end
 	end
 
 	def eqptype_edit
@@ -250,8 +260,8 @@ class AdminController < ApplicationController
 	end
 
 	def eqp_destroy
-		@eqptype = Eqptype.find(params[:id])
-		@eqp = Eqp.find(params[:eqp])
+		@eqp = Eqp.find(params[:id])
+		@eqptype = @eqp.eqptype
 		@eqp.destroy
 		respond_to do |format|
       		format.html { redirect_to( :action => "eqptype_show", :id => @eqptype.id) }      	
@@ -259,8 +269,8 @@ class AdminController < ApplicationController
 	end
 
 	def eqp_moveup
-		@eqptype = Eqpgroup.find(params[:eqptype_id])
 		@eqp = Eqp.find(params[:id])
+		@eqptype = @eqp.eqptype
 		@eqp.indx = @eqp.indx - 3
 		@eqp.save
 		respond_to do |format|
@@ -269,8 +279,8 @@ class AdminController < ApplicationController
 	end
 
 	def eqp_update
-		@eqptype = Eqptype.find(params[:eqptype_id])
 		@eqp = Eqp.find(params[:id])
+		@eqptype = @eqp.eqptype;
 		respond_to do |format|
 			if @eqp.update_attributes(params[:eqp])
 				format.html { redirect_to( :action => "eqptype_show", :id => @eqptype.id) }      	
@@ -286,11 +296,16 @@ class AdminController < ApplicationController
 		@title = "Просмот товаров"
 		@eqptype = Eqptype.find(params[:eqptype_id])
 		@eqp = Eqp.find(params[:id])
+
 	end
 
 	def eqp_edit
 		@title = "Редактирование товара"
-		@eqptype = Eqptype.find(params[:eqptype_id])
 		@eqp = Eqp.find(params[:id])
+		@id = @eqp.eqptype;
+		@p1 = @eqp.eqptype.eqpgroup.p1;
+		@p2 = @eqp.eqptype.eqpgroup.p2;
+		@p3 = @eqp.eqptype.eqpgroup.p3;
+		@p4 = @eqp.eqptype.eqpgroup.p4;
 	end
 end

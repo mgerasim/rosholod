@@ -1,5 +1,5 @@
 <%= @title %>
-<%= form_for @eqp, :url => { :action => :eqp_update, :id => @eqp } do |form| %>
+<%= form_for @eqp, :url => { :action => :eqp_create, :id => @id } do |form| %>
 	<p>Наименование: <%= form.text_field :name, :size => 30 %></p>
 	<% if @p1!="" %>
 	    <p><%= @p1 %> <%= form.text_field :v1, :size => 30 %></p>
@@ -13,5 +13,5 @@
 	<% if @p4!="" %>
 		<p><%= @p4 %> <%= form.text_field :v4, :size => 30 %></p>
 	<% end %>
-	<p><%= form.submit "Изменить"  %></p>
+	<p><%= form.submit "Добавить"  %></p>
 <% end %>
