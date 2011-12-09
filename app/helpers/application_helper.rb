@@ -8,4 +8,10 @@ module ApplicationHelper
 	    "#{base_title} | #{@title}"
 	end
     end
+    
+    def menu
+	eqpfamilies=Eqpfamily.find(:all, :order => "indx")
+	eqpfamilies
+    end
+    
 end

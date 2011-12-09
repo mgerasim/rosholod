@@ -1,4 +1,5 @@
-<%= form_for @eqptype, :url => { :action => :eqptype_create, :id => @id } do |form| %>
+<%= form_for @eqptype, :url => { :action => :eqptype_create, :id => @id }, :html => {:multipart => true} do |form| %>
 	<p>Наименование: <%= form.text_field :name, :size => 30 %></p>
+        <%= form.file_field :img01 %>
 	<p><%= form.submit "Добавить"  %></p>
 <% end %>

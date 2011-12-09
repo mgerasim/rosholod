@@ -1,3 +1,13 @@
+GIT
+  remote: http://github.com/thoughtbot/paperclip.git
+  revision: 5f3b88d19e223abfeec5278a79232a856cfefa67
+  specs:
+    paperclip (2.4.5)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -32,6 +42,7 @@ GEM
     ansi (1.4.1)
     arel (2.2.1)
     builder (3.0.0)
+    cocaine (0.2.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -152,6 +163,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   execjs
   jquery-rails
+  paperclip!
   pg
   rails (= 3.1.2)
   rspec-rails (= 2.6.1)
