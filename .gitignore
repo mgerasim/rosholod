@@ -11,12 +11,12 @@
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
+#/log/*.log
 /tmp
 /public/assets/products
 
 
 .bundle
 db/*.sqlite3
-log/*.log
+#log/*.log
 tmp/**/*
