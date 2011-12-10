@@ -1,3 +1,6 @@
+# 2011-12-10 Коммент gem 'therubyracer'.  Добавил gem 'therubyracer-heroku' в group :production для исправления не усьанавливается libv8 на Win
+# therubyracer gem on windows http://stackoverflow.com/questions/6356450/therubyracer-gem-on-windows
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.2'
@@ -42,7 +45,7 @@ group :development, :test do
 end
 
 group :production, :staging do
-
+#  gem 'therubyracer-heroku'
   gem 'pg'
 end
 
