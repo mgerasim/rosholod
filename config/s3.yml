@@ -1,0 +1,13 @@
+development:
+   access_key_id: AKIAJPNLN2VOL4H5CH5A
+   secret_access_key: 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
+   bucket: rosholod
+
+test:
+   access_key_id: AKIAJPNLN2VOL4H5CH5A
+   secret_access_key: 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
+   bucket: rosholod
+production:
+   access_key_id: AKIAJPNLN2VOL4H5CH5A
+   secret_access_key: 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
+   bucket: rosholod

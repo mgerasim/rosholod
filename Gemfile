@@ -31,7 +31,7 @@ gem 'jquery-rails'
 
 
 gem 'execjs'
-gem 'therubyracer'
+#gem 'therubyracer'
 
 group :development, :test do
   # Pretty printed test output
@@ -48,8 +48,8 @@ end
 
 gem 'taps'
 
-gem 'thin'
+#gem 'thin'
 
-gem 'paperclip', :git => "http://github.com/thoughtbot/paperclip.git"
+gem 'paperclip'
 
 gem 'aws-s3'
