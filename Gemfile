@@ -45,7 +45,7 @@ group :development, :test do
 end
 
 group :production, :staging do
-#  gem 'therubyracer-heroku'
+  gem 'therubyracer-heroku'
   gem 'pg'
 end
 
