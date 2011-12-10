@@ -1,13 +1,14 @@
+# 2011-12-10 SET BUCKET rosholod.s3-website-ap-northeast-1.amazonaws.com
 development:
    access_key_id: AKIAJPNLN2VOL4H5CH5A
    secret_access_key: 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
-   bucket: rosholod
+   bucket: rosholod.s3-website-ap-northeast-1.amazonaws.com
 
 test:
    access_key_id: AKIAJPNLN2VOL4H5CH5A
    secret_access_key: 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
-   bucket: rosholod
+   bucket: rosholod.s3-website-ap-northeast-1.amazonaws.com
 production:
    access_key_id: AKIAJPNLN2VOL4H5CH5A
    secret_access_key: 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
-   bucket: rosholod
+   bucket: rosholod.s3-website-ap-northeast-1.amazonaws.com
