@@ -8,6 +8,8 @@ development:
   database: db/development.sqlite3
   pool: 5
   timeout: 5000
+  access_key_id: AKIAJPNLN2VOL4H5CH5A
+  secret_access_key: 8anNz5rzVaCMniAxcm4UYb47TQCgqxfVaQTocCwZ
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,6 +19,8 @@ test:
   database: db/test.sqlite3
   pool: 5
   timeout: 5000
+  access_key_id: AKIAJPNLN2VOL4H5CH5A
+  secret_access_key: 8anNz5rzVaCMniAxcm4UYb47TQCgqxfVaQTocCwZ
 
 production:
   encoding: unicode
@@ -26,6 +30,9 @@ production:
   host: ec2-107-22-181-228.compute-1.amazonaws.com
   database: isjsolyyzi
   password: jz5KG9phtZCsspy6IUPm
+  access_key_id: AKIAJPNLN2VOL4H5CH5A
+  secret_access_key: 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
+
   #adapter: sqlite3
   #database: db/production.sqlite3
   #pool: 5

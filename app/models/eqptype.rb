@@ -2,6 +2,12 @@ class Eqptype < ActiveRecord::Base
 	belongs_to :eqpgroup
 	has_many :eqps, :order => "indx"
 	has_attached_file :img01, :styles => { :small => "150x150" },
+			  :storage => :s3,
+			  :bucket => 'rosholod',
+			  :s3_credentials => {
+     				 :access_key_id => ENV['S3_KEY'],
+				 :secret_access_key => ENV['S3_SECRET']
+			  }
 	                  :url  => "/assets/products/:id/:style/:basename.:extension",
 	                  :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
 	                                    
