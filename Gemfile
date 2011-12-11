@@ -45,7 +45,7 @@ group :development, :test do
 end
 
 group :production, :staging do
-  gem 'therubyracer'
+#  gem 'therubyracer'
   gem 'pg'
 end
 
@@ -54,5 +54,4 @@ gem 'taps'
 #gem 'thin'
 
 gem 'paperclip'
-
-gem 'aws-s3'
+gem 'aws-s3', :require => 'aws/s3'
