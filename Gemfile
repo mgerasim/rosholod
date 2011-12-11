@@ -53,5 +53,5 @@ gem 'taps'
 
 #gem 'thin'
 
-gem 'paperclip'
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'aws-s3', :require => 'aws/s3'
