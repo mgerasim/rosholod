@@ -1,14 +1,18 @@
 class Eqptype < ActiveRecord::Base
 
-        require 'aws/s3'
+    
 
 	belongs_to :eqpgroup
 	has_many :eqps, :order => "indx"
 	has_attached_file :img01, :styles => { :small => "150x150" },
 			  :storage => :s3,
-			  :bucket => 'rosholod',
+#			  :bucket => 'rosholod-devel',
 			  :s3_credentials => Rails.root.join('config/s3.yml'),
-                          :s3_permissions => :public_read,
+#			  :s3_credentials => {
+ #    				 :access_key_id => 'AKIAJPNLN2VOL4H5CH5A',
+#			         :secret_access_key => '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'
+#			  },
+              :s3_permissions => :public_read,
 
 	                  :url  => 's3-website-ap-northeast-1.amazonaws.com',
 #	                  :s3_host_name  => 's3-website-ap-northeast-1.amazonaws.com',

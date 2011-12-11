@@ -1,5 +1,7 @@
 #encoding: utf-8
 class AdminController < ApplicationController
+
+
 	def index
 		@title = "Администрирование"
 		@eqpfamilies = Eqpfamily.find(:all, :order => 'indx')
@@ -168,14 +170,19 @@ class AdminController < ApplicationController
 		@eqpgroup = Eqpgroup.find(params[:id])
 		@eqptype.eqpgroup = @eqpgroup
 		@eqptype.indx = 9999
+#		respond_to do |format|
+#			if @eqptype.save
+#				#format.html { redirect_to(@eqpfamily) }
+#				format.html { redirect_to( :action => "eqpgroup_show", :id => @eqpgroup, :eqpfamily_id => @eqpgroup.eqpfamily )}
+#			else
+#				format.html { render :action => "eqptype_new" }
+#			end
+#		end
+		@eqptype.save
 		respond_to do |format|
-			if @eqptype.save
-				#format.html { redirect_to(@eqpfamily) }
-				format.html { redirect_to( :action => "eqpgroup_show", :id => @eqpgroup, :eqpfamily_id => @eqpgroup.eqpfamily )}
-			else
-				format.html { render :action => "eqptype_new" }
-			end
+			format.html { redirect_to( :action => "eqpgroup_show", :id => @eqpgroup, :eqpfamily_id => @eqpgroup.eqpfamily )}
 		end
+
 	end
 
 	def eqptype_destroy

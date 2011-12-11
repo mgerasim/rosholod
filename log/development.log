@@ -10514,3 +10514,1198 @@ NameError (uninitialized constant AWS::S3::NoSuchBucket):
 Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
 Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
 Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:13:31 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 1281ms (Views: 718.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:13:42 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 734ms (Views: 93.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_new/11" for 127.0.0.1 at 2011-12-11 16:13:45 +1100
+  Processing by AdminController#eqpgroup_new as HTML
+  Parameters: {"id"=>"11"}
+Rendered admin/eqpgroup_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqpgroup_create/11" for 127.0.0.1 at 2011-12-11 16:13:50 +1100
+  Processing by AdminController#eqpgroup_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqpgroup"=>{"name"=>"cfvbxcf", "p1"=>"", "p2"=>"", "p3"=>"", "p4"=>""}, "commit"=>"Добавить", "id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mSQL (203.1ms)[0m  INSERT INTO "eqpgroups" ("created_at", "eqpfamily_id", "indx", "name", "p1", "p2", "p3", "p4", "pn", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:13:51 UTC +00:00], ["eqpfamily_id", 11], ["indx", 9999], ["name", "cfvbxcf"], ["p1", ""], ["p2", ""], ["p3", ""], ["p4", ""], ["pn", nil], ["updated_at", Sun, 11 Dec 2011 05:13:51 UTC +00:00]]
+Redirected to http://localhost:3000/admin/eqpfamily_show/11
+Completed 302 Found in 812ms
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:13:51 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqpgroups" SET "indx" = 2, "updated_at" = '2011-12-11 05:13:52.046875' WHERE "eqpgroups"."id" = 15[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 375ms (Views: 31.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_show/15?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:13:53 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"15"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/15" for 127.0.0.1 at 2011-12-11 16:13:55 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"15"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (78.1ms)
+Completed 200 OK in 156ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/15" for 127.0.0.1 at 2011-12-11 16:14:01 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"567", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2a5dfd8 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-1036-3feoc3>>}, "commit"=>"Добавить", "id"=>"15"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1yygjdx.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1yygjdx.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1yygjdx20111211-1036-3ezfm1"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "15"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:14:03 UTC +00:00], ["eqpgroup_id", 15], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:14:02 UTC +00:00], ["indx", 9999], ["name", "567"], ["updated_at", Sun, 11 Dec 2011 05:14:03 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 4000ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:172:in `block in eqptype_create'
+  app/controllers/admin_controller.rb:171:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/eqpgroup_show/15?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:14:47 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"15"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/15" for 127.0.0.1 at 2011-12-11 16:14:48 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"15"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 94ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/15" for 127.0.0.1 at 2011-12-11 16:14:53 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"tryt", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2bbdae8 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-1036-1d71qps>>}, "commit"=>"Добавить", "id"=>"15"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1p9k5ii.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1p9k5ii.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1p9k5ii20111211-1036-5r9zc7"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "15"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:14:54 UTC +00:00], ["eqpgroup_id", 15], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:14:53 UTC +00:00], ["indx", 9999], ["name", "tryt"], ["updated_at", Sun, 11 Dec 2011 05:14:54 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 2922ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:172:in `block in eqptype_create'
+  app/controllers/admin_controller.rb:171:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:17:14 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (78.1ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 141ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:17:16 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 188ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/15?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:17:18 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"15"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 266ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/15" for 127.0.0.1 at 2011-12-11 16:17:19 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"15"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 141ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/15" for 127.0.0.1 at 2011-12-11 16:17:25 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"fdg", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2c21d90 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-1036-hwyxx3>>}, "commit"=>"Добавить", "id"=>"15"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-zk4m3p.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-zk4m3p.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-zk4m3p20111211-1036-6e4pov"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "15"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 05:17:26 UTC +00:00], ["eqpgroup_id", 15], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:17:26 UTC +00:00], ["indx", 9999], ["name", "fdg"], ["updated_at", Sun, 11 Dec 2011 05:17:26 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 7266ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:172:in `block in eqptype_create'
+  app/controllers/admin_controller.rb:171:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/admin/eqptype_new/15" for 127.0.0.1 at 2011-12-11 16:18:35 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"15"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (171.9ms)
+Completed 200 OK in 250ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/15" for 127.0.0.1 at 2011-12-11 16:18:40 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"rtytr", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2aa3560 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-1036-lsrcbl>>}, "commit"=>"Добавить", "id"=>"15"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1wvih62.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1wvih62.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-1036-1wvih6220111211-1036-1drukpm"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "15"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:18:40 UTC +00:00], ["eqpgroup_id", 15], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:18:40 UTC +00:00], ["indx", 9999], ["name", "rtytr"], ["updated_at", Sun, 11 Dec 2011 05:18:40 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3250ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:172:in `block in eqptype_create'
+  app/controllers/admin_controller.rb:171:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:21:50 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-11 16:21:54 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-11 16:21:55 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 281ms (Views: 46.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-11 16:21:56 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:24:54 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1219ms (Views: 671.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:25:04 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (15.6ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 688ms (Views: 31.2ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpgroup_show/15?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:25:07 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"15"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 344ms (Views: 171.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqptype_new/15" for 127.0.0.1 at 2011-12-11 16:25:16 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"15"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (31.2ms)
+Completed 200 OK in 203ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/15" for 127.0.0.1 at 2011-12-11 16:25:23 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"ghf", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2c52fa8 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2400-1xffzsu>>}, "commit"=>"Добавить", "id"=>"15"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1kcyjlt.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1kcyjlt.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1kcyjlt20111211-2400-1blmxlf"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "15"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (171.9ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 05:25:24 UTC +00:00], ["eqpgroup_id", 15], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:25:23 UTC +00:00], ["indx", 9999], ["name", "ghf"], ["updated_at", Sun, 11 Dec 2011 05:25:24 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3438ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:33:05 +1100
+  Processing by AdminController#index as HTML
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:33:10 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 94ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/15?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:33:13 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"15"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 46.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqptype_new/15" for 127.0.0.1 at 2011-12-11 16:33:14 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"15"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (78.1ms)
+Completed 200 OK in 141ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/15" for 127.0.0.1 at 2011-12-11 16:33:18 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"563", "img01"=>#<ActionDispatch::Http::UploadedFile:0x29c8da0 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2400-na74rd>>}, "commit"=>"Добавить", "id"=>"15"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1pfr05q.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1pfr05q.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1pfr05q20111211-2400-1796wik"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "15"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:33:19 UTC +00:00], ["eqpgroup_id", 15], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:33:19 UTC +00:00], ["indx", 9999], ["name", "563"], ["updated_at", Sun, 11 Dec 2011 05:33:19 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3312ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:38:51 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:38:56 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 31.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_new/11" for 127.0.0.1 at 2011-12-11 16:38:57 +1100
+  Processing by AdminController#eqpgroup_new as HTML
+  Parameters: {"id"=>"11"}
+Rendered admin/eqpgroup_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (125.0ms)
+Completed 200 OK in 203ms (Views: 171.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqpgroup_create/11" for 127.0.0.1 at 2011-12-11 16:39:00 +1100
+  Processing by AdminController#eqpgroup_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqpgroup"=>{"name"=>"tter", "p1"=>"", "p2"=>"", "p3"=>"", "p4"=>""}, "commit"=>"Добавить", "id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mSQL (31.2ms)[0m  INSERT INTO "eqpgroups" ("created_at", "eqpfamily_id", "indx", "name", "p1", "p2", "p3", "p4", "pn", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:39:01 UTC +00:00], ["eqpfamily_id", 11], ["indx", 9999], ["name", "tter"], ["p1", ""], ["p2", ""], ["p3", ""], ["p4", ""], ["pn", nil], ["updated_at", Sun, 11 Dec 2011 05:39:01 UTC +00:00]]
+Redirected to http://localhost:3000/admin/eqpfamily_show/11
+Completed 302 Found in 281ms
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:39:01 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36m (15.6ms)[0m  [1mUPDATE "eqpgroups" SET "indx" = 4, "updated_at" = '2011-12-11 05:39:01.375000' WHERE "eqpgroups"."id" = 16[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 406ms (Views: 46.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_show/16?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:39:04 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"16"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 203ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/16" for 127.0.0.1 at 2011-12-11 16:39:05 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"16"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (31.2ms)
+Completed 200 OK in 156ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/16" for 127.0.0.1 at 2011-12-11 16:39:09 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"ert", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2e20fa8 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2400-1wj874y>>}, "commit"=>"Добавить", "id"=>"16"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1l8l5zq.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1l8l5zq.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1l8l5zq20111211-2400-1yxi674"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "16"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:39:10 UTC +00:00], ["eqpgroup_id", 16], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:39:09 UTC +00:00], ["indx", 9999], ["name", "ert"], ["updated_at", Sun, 11 Dec 2011 05:39:10 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3203ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/admin/eqptype_create/16" for 127.0.0.1 at 2011-12-11 16:40:10 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"ert", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2da5dc8 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2400-10pseg6>>}, "commit"=>"Добавить", "id"=>"16"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-k60j2k.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-k60j2k.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-k60j2k20111211-2400-34n1mw"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "16"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:40:10 UTC +00:00], ["eqpgroup_id", 16], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:40:10 UTC +00:00], ["indx", 9999], ["name", "ert"], ["updated_at", Sun, 11 Dec 2011 05:40:10 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3312ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/eqptype_new/16" for 127.0.0.1 at 2011-12-11 16:40:55 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"16"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (109.4ms)
+Completed 200 OK in 203ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/16" for 127.0.0.1 at 2011-12-11 16:41:01 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"wer", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2ba3bb0 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2400-7turyd>>}, "commit"=>"Добавить", "id"=>"16"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1ixjxrx.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1ixjxrx.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2400-1ixjxrx20111211-2400-12tqqoo"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "16"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 05:41:02 UTC +00:00], ["eqpgroup_id", 16], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:41:02 UTC +00:00], ["indx", 9999], ["name", "wer"], ["updated_at", Sun, 11 Dec 2011 05:41:02 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 2984ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 16:45:46 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1312ms (Views: 687.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:45:56 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (109.4ms)
+Completed 200 OK in 766ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/16?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:45:59 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"16"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mEqptype Load (15.6ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 312ms (Views: 125.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqptype_new/16" for 127.0.0.1 at 2011-12-11 16:46:00 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"16"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 172ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/16" for 127.0.0.1 at 2011-12-11 16:46:05 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"try", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2c9ffa0 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-4036-90glw8>>}, "commit"=>"Добавить", "id"=>"16"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-4036-1va302i.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-4036-1va302i.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-4036-1va302i20111211-4036-1gj1vbl"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "16"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (140.6ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 05:46:05 UTC +00:00], ["eqpgroup_id", 16], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:46:05 UTC +00:00], ["indx", 9999], ["name", "try"], ["updated_at", Sun, 11 Dec 2011 05:46:05 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3219ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/eqptype_new/16" for 127.0.0.1 at 2011-12-11 16:50:02 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"16"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (156.2ms)
+Completed 200 OK in 1375ms (Views: 750.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/16" for 127.0.0.1 at 2011-12-11 16:50:15 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"yt", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2921700 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2240-94942r>>}, "commit"=>"Добавить", "id"=>"16"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2240-16ec24x.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2240-16ec24x.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2240-16ec24x20111211-2240-1sck70t"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "16"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (140.6ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 05:50:16 UTC +00:00], ["eqpgroup_id", 16], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:50:15 UTC +00:00], ["indx", 9999], ["name", "yt"], ["updated_at", Sun, 11 Dec 2011 05:50:16 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3672ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:179:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-12-11 16:57:29 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1250ms (Views: 687.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:57:39 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 688ms (Views: 31.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_show/16?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:57:40 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"16"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "16"]]
+Completed 500 Internal Server Error in 47ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/eqptype.rb:15: syntax error, unexpected tASSOC, expecting keyword_end
+                          :s3_permissions => :public_read,
+                                            ^
+D:/Developer/work/rosholod/app/models/eqptype.rb:17: syntax error, unexpected ',', expecting keyword_end
+D:/Developer/work/rosholod/app/models/eqptype.rb:19: syntax error, unexpected ',', expecting keyword_end):
+  app/controllers/admin_controller.rb:147:in `eqpgroup_show'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/eqpgroup_new/11" for 127.0.0.1 at 2011-12-11 16:59:20 +1100
+  Processing by AdminController#eqpgroup_new as HTML
+  Parameters: {"id"=>"11"}
+Rendered admin/eqpgroup_new.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (78.1ms)
+Completed 200 OK in 125ms (Views: 93.8ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/admin/eqpgroup_create/11" for 127.0.0.1 at 2011-12-11 16:59:26 +1100
+  Processing by AdminController#eqpgroup_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqpgroup"=>{"name"=>"rte", "p1"=>"ert", "p2"=>"", "p3"=>"", "p4"=>""}, "commit"=>"Добавить", "id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mSQL (156.2ms)[0m  INSERT INTO "eqpgroups" ("created_at", "eqpfamily_id", "indx", "name", "p1", "p2", "p3", "p4", "pn", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:59:26 UTC +00:00], ["eqpfamily_id", 11], ["indx", 9999], ["name", "rte"], ["p1", "ert"], ["p2", ""], ["p3", ""], ["p4", ""], ["pn", nil], ["updated_at", Sun, 11 Dec 2011 05:59:26 UTC +00:00]]
+Redirected to http://localhost:3000/admin/eqpfamily_show/11
+Completed 302 Found in 594ms
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 16:59:27 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqpgroups" SET "indx" = 6, "updated_at" = '2011-12-11 05:59:27.515625' WHERE "eqpgroups"."id" = 17[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 312ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 16:59:29 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 266ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 16:59:30 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (31.2ms)
+Completed 200 OK in 188ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 16:59:34 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"rr", "img01"=>#<ActionDispatch::Http::UploadedFile:0x6cfd020 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-648-19eu5te>>}, "commit"=>"Добавить", "id"=>"17"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-648-1g3zggj.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-648-1g3zggj.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-648-1g3zggj20111211-648-713v91"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 05:59:35 UTC +00:00], ["eqpgroup_id", 17], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 05:59:35 UTC +00:00], ["indx", 9999], ["name", "rr"], ["updated_at", Sun, 11 Dec 2011 05:59:35 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3438ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:182:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (109.4ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 17:15:24 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (406.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1609ms (Views: 890.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 17:15:35 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 953ms (Views: 46.9ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:15:38 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (484.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 750ms (Views: 578.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:15:40 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (93.8ms)
+Completed 200 OK in 156ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 17:15:45 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"sd", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2c30298 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-3440-1x4pc4f>>}, "commit"=>"Добавить", "id"=>"17"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-3440-16r5ocl.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-3440-16r5ocl.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-3440-16r5ocl20111211-3440-yphbl2"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (187.5ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 06:15:46 UTC +00:00], ["eqpgroup_id", 17], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 06:15:45 UTC +00:00], ["indx", 9999], ["name", "sd"], ["updated_at", Sun, 11 Dec 2011 06:15:46 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+Completed 500 Internal Server Error in 3953ms
+
+NameError (uninitialized constant AWS::S3::NoSuchBucket):
+  app/controllers/admin_controller.rb:182:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 17:24:24 +1100
+
+LoadError (no such file to load -- aws/s3):
+  app/controllers/admin_controller.rb:4:in `<class:AdminController>'
+  app/controllers/admin_controller.rb:2:in `<top (required)>'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (62.5ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (203.1ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 17:24:49 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 719ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 17:24:54 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (78.1ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 906ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:24:56 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 281ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:24:57 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 17:25:02 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"truy", "img01"=>#<ActionDispatch::Http::UploadedFile:0x29045d0 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-3592-8wrf9r>>}, "commit"=>"Добавить", "id"=>"17"}
+Completed 500 Internal Server Error in 62ms
+
+LoadError (no such file to load -- aws/s3 (You may need to install the aws-s3 gem)):
+  app/controllers/admin_controller.rb:169:in `new'
+  app/controllers/admin_controller.rb:169:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 17:47:24 +1100
+  Processing by AdminController#index as HTML
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 203ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 17:47:26 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 188ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:47:28 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 188ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:47:29 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (46.9ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 234ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 17:47:35 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"fgh", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2936898 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-3592-w30kqa>>}, "commit"=>"Добавить", "id"=>"17"}
+Completed 500 Internal Server Error in 78ms
+
+LoadError (no such file to load -- aws/s3 (You may need to install the aws-s3 gem)):
+  app/controllers/admin_controller.rb:169:in `new'
+  app/controllers/admin_controller.rb:169:in `eqptype_create'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 17:49:49 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1250ms (Views: 703.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 17:50:18 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (15.6ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 781ms (Views: 62.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:50:22 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 266ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:50:24 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (31.2ms)
+Completed 200 OK in 203ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 17:50:29 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"dfg", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2c2e030 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2168-1ivbl33>>}, "commit"=>"Добавить", "id"=>"17"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-crj2dx.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-crj2dx.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-crj2dx20111211-2168-1grldiy"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (140.6ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 06:50:29 UTC +00:00], ["eqpgroup_id", 17], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 06:50:29 UTC +00:00], ["indx", 9999], ["name", "dfg"], ["updated_at", Sun, 11 Dec 2011 06:50:29 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+[paperclip] saving /small/shkaph2.jpg
+[32mCommand[0m :: file -b --mime "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-crj2dx20111211-2168-1grldiy"
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Redirected to http://localhost:3000/admin/eqpgroup_show/17?eqpfamily_id=11
+Completed 302 Found in 15453ms
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:50:44 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35m (15.6ms)[0m  UPDATE "eqptypes" SET "indx" = 0, "updated_at" = '2011-12-11 06:50:45.125000' WHERE "eqptypes"."id" = 5
+[paperclip] Saving attachments.
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (15.6ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 453ms (Views: 125.0ms | ActiveRecord: 46.9ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:50:56 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (78.1ms)
+Completed 200 OK in 141ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:50:56 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (78.1ms)
+Completed 200 OK in 141ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 17:51:08 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"111", "img01"=>#<ActionDispatch::Http::UploadedFile:0x28daac8 @original_filename="split.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"split.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2168-62zpip>>}, "commit"=>"Добавить", "id"=>"17"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-5vcop7.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-5vcop7.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-5vcop720111211-2168-14yllnl"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 06:51:09 UTC +00:00], ["eqpgroup_id", 17], ["img01_content_type", "image/jpeg"], ["img01_file_name", "split.jpg"], ["img01_file_size", 10738], ["img01_updated_at", Sun, 11 Dec 2011 06:51:09 UTC +00:00], ["indx", 9999], ["name", "111"], ["updated_at", Sun, 11 Dec 2011 06:51:09 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/split.jpg
+[paperclip] saving /small/split.jpg
+[32mCommand[0m :: file -b --mime "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2168-5vcop720111211-2168-14yllnl"
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/eqpgroup_show/17?eqpfamily_id=11
+Completed 302 Found in 2953ms
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:51:11 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+[paperclip] Saving attachments.
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqptypes" SET "indx" = 2, "updated_at" = '2011-12-11 06:51:12.265625' WHERE "eqptypes"."id" = 6[0m
+[paperclip] Saving attachments.
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 500ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 17:56:27 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1266ms (Views: 656.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/11" for 127.0.0.1 at 2011-12-11 17:56:37 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 656ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:56:38 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 328ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/17" for 127.0.0.1 at 2011-12-11 17:56:41 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"17"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/17" for 127.0.0.1 at 2011-12-11 17:56:54 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"fdgfsd", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2b2f8a0 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2864-12li8cq>>}, "commit"=>"Добавить", "id"=>"17"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2864-tje0au.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2864-tje0au.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2864-tje0au20111211-2864-1oabnq5"
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[36mSQL (140.6ms)[0m  [1mINSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 06:56:55 UTC +00:00], ["eqpgroup_id", 17], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 06:56:54 UTC +00:00], ["indx", 9999], ["name", "fdgfsd"], ["updated_at", Sun, 11 Dec 2011 06:56:55 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+[paperclip] saving /small/shkaph2.jpg
+[32mCommand[0m :: file -b --mime "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2864-tje0au20111211-2864-1oabnq5"
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1
+Redirected to http://localhost:3000/admin/eqpgroup_show/17?eqpfamily_id=11
+Completed 302 Found in 11984ms
+
+
+Started GET "/admin/eqpgroup_show/17?eqpfamily_id=11" for 127.0.0.1 at 2011-12-11 17:57:06 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"11", "id"=>"17"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+  [1m[35m (0.0ms)[0m  UPDATE "eqptypes" SET "indx" = 4, "updated_at" = '2011-12-11 06:57:06.859375' WHERE "eqptypes"."id" = 7
+[paperclip] Saving attachments.
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 422ms (Views: 46.9ms | ActiveRecord: 0.0ms)

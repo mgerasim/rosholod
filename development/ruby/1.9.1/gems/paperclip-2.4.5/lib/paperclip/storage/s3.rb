@@ -226,6 +226,8 @@ module Paperclip
                                     {:content_type => file.content_type.to_s.strip,
                                      :access => s3_permissions(style),
                                     }.merge(@s3_headers))
+
+
           rescue AWS::S3::NoSuchBucket => e
             create_bucket
             retry

@@ -46,6 +46,9 @@ module Rosholod
     config.assets.version = '1.0'
 
     # config.gem "aws-s3", :version => ">= 0.6.2", :lib => "aws/s3"
+#config.gem "aws-s3", :version => ">= 0.6.2", :lib => "aws/s3"
+#config.gem 'right_aws', :version => '2.0.0'
+
 
   end
 end
