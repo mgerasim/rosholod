@@ -9,21 +9,26 @@
 <body>
     <div class="container">
 	<!– header –>
-	<div class="span-24 header">Header</div>
+	<div class="header">
+		Header<br><br>
+	</div>
 	 
 	<!– content –>
 	
-	<div class="span-5 ">
-	    <%= render 'layouts/sidebaradmin' %>
+	<div class="span-8 ">
+		<div class="title-content">
+			Меню
+		</div>
+		<%= render 'layouts/sidebaradmin' %>
 	</div>
 	
-	<div class="span-18">
+	<div class="span-16 last">
 	    <%= yield %>
 	</div>
 	 
 
 	<!– footer –>
-	<div class="span-24 footer">
+	<div class="footer">
 	    Тех помощь: mgerasim.mail@gmail.com
 	</div>
 	

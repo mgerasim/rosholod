@@ -1,7 +1,21 @@
-<table>
-<% menu.each do |eqpfamily| %>
-	<tr>
-	<td><%= eqpfamily.name %></td>
-	</tr>
+<ol>
+<% menu.each do |eqpfamily| %>	
+	<li>
+		<%= link_to eqpfamily.name, :action => 'eqpfamily_show', :id => eqpfamily.id %>		
+		<ul>
+			<% eqpfamily.eqpgroups.each do |eqpgroup| %>
+				<li>
+					<%= link_to eqpgroup.name, :action => 'eqpgroup_show', :eqpfamily_id => eqpfamily.id, :id => eqpgroup.id  %>					
+					<ul>
+					<% eqpgroup.eqptypes.each do |eqptype| %>
+						<li>
+							<%= link_to eqptype.name, :action => 'eqptype_show', :eqpgroup_id => eqpgroup.id, :id => eqptype.id  %>
+						</li>
+					<% end %>
+					</ul>
+				</li>
+			<% end %>
+		</ul>
+	</li>	
 <% end %>
-</table>
+</ol>

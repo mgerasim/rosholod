@@ -3,8 +3,8 @@
 <% @eqpfamilies.each do |eqpfamily| %>
 	<tr>
 	<td><%= eqpfamily.name %></td>
-		<td><%= link_to 'Показать', :action => 'eqpfamily_show', :id => eqpfamily.id %>
-		<td><%= link_to 'Редактировать', :action => 'eqpfamily_edit', :id => eqpfamily.id %>
+		<td><%= link_to 'Показать', :action => 'eqpfamily_show', :id => eqpfamily.id %></td>
+		<td><%= link_to 'Редактировать', :action => 'eqpfamily_edit', :id => eqpfamily.id %></td>
 		<td><%= link_to 'Удалить', { :action => 'eqpfamily_destroy', :id => eqpfamily.id }, :confirm => 'Вы уверены?', :method => :post  %></td>
 		<td><%= link_to 'Вверх', :action => 'eqpfamily_moveup', :id => eqpfamily.id %></td>
 	</tr>

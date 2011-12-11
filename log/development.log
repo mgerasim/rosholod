@@ -11709,3 +11709,1001 @@ Rendered layouts/_stylesheets.html.erb (0.0ms)
   [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
 Rendered layouts/_sidebaradmin.html.erb (0.0ms)
 Completed 200 OK in 422ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:45:02 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 1297ms (Views: 687.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:45:44 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (62.5ms)
+Completed 200 OK in 125ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:46:09 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:46:27 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:46:48 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:47:08 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 125ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:47:28 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:47:51 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:48:04 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:48:17 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:48:57 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:51:45 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:52:10 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:52:20 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:52:34 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 18:57:50 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-11 19:00:45 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (718.8ms)
+Completed 200 OK in 781ms (Views: 718.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpfamily_show/7" for 127.0.0.1 at 2011-12-11 19:01:00 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (31.2ms)
+Completed 200 OK in 156ms (Views: 109.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_new/7" for 127.0.0.1 at 2011-12-11 19:01:03 +1100
+  Processing by AdminController#eqpgroup_new as HTML
+  Parameters: {"id"=>"7"}
+Rendered admin/eqpgroup_new.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (93.8ms)
+Completed 200 OK in 156ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqpgroup_create/7" for 127.0.0.1 at 2011-12-11 19:01:08 +1100
+  Processing by AdminController#eqpgroup_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqpgroup"=>{"name"=>"кцеуке", "p1"=>"уке", "p2"=>"укцеуке", "p3"=>"", "p4"=>""}, "commit"=>"Добавить", "id"=>"7"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mSQL (218.8ms)[0m  [1mINSERT INTO "eqpgroups" ("created_at", "eqpfamily_id", "indx", "name", "p1", "p2", "p3", "p4", "pn", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 11 Dec 2011 08:01:08 UTC +00:00], ["eqpfamily_id", 7], ["indx", 9999], ["name", "кцеуке"], ["p1", "уке"], ["p2", "укцеуке"], ["p3", ""], ["p4", ""], ["pn", nil], ["updated_at", Sun, 11 Dec 2011 08:01:08 UTC +00:00]]
+Redirected to http://localhost:3000/admin/eqpfamily_show/7
+Completed 302 Found in 625ms
+
+
+Started GET "/admin/eqpfamily_show/7" for 127.0.0.1 at 2011-12-11 19:01:08 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35m (0.0ms)[0m  UPDATE "eqpgroups" SET "indx" = 0, "updated_at" = '2011-12-11 08:01:08.984375' WHERE "eqpgroups"."id" = 18
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (15.6ms)
+Completed 200 OK in 203ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/7" for 127.0.0.1 at 2011-12-11 19:03:35 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (15.6ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (93.8ms)
+Completed 200 OK in 266ms (Views: 93.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpgroup_show/18?eqpfamily_id=7" for 127.0.0.1 at 2011-12-11 19:04:08 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"7", "id"=>"18"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35mEqptype Load (15.6ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 7 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (46.9ms)
+Completed 200 OK in 234ms (Views: 93.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-12-11 19:04:15 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (15.6ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (312.5ms)
+Completed 200 OK in 484ms (Views: 343.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpfamily_moveup/11" for 127.0.0.1 at 2011-12-11 19:04:26 +1100
+  Processing by AdminController#eqpfamily_moveup as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" 
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqpfamilies" SET "indx" = 13, "updated_at" = '2011-12-11 08:04:26.843750' WHERE "eqpfamilies"."id" = 11[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 219ms
+
+
+Started GET "/admin/eqpfamily_moveup/11" for 127.0.0.1 at 2011-12-11 19:04:26 +1100
+  Processing by AdminController#eqpfamily_moveup as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "11"]]
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" [0m
+  [1m[35m (0.0ms)[0m  UPDATE "eqpfamilies" SET "indx" = 10, "updated_at" = '2011-12-11 08:04:27.093750' WHERE "eqpfamilies"."id" = 11
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 156ms
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-12-11 19:04:27 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35m (0.0ms)[0m  UPDATE "eqpfamilies" SET "indx" = 12, "updated_at" = '2011-12-11 08:04:27.375000' WHERE "eqpfamilies"."id" = 11
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqpfamilies" SET "indx" = 14, "updated_at" = '2011-12-11 08:04:27.625000' WHERE "eqpfamilies"."id" = 9[0m
+  [1m[35m (0.0ms)[0m  UPDATE "eqpfamilies" SET "indx" = 16, "updated_at" = '2011-12-11 08:04:27.890625' WHERE "eqpfamilies"."id" = 10
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Completed 200 OK in 906ms (Views: 234.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-12-11 19:13:03 +1100
+  Processing by AdminController#index as HTML
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (281.2ms)
+Completed 200 OK in 453ms (Views: 312.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-11 19:13:09 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (218.8ms)
+Completed 200 OK in 391ms (Views: 250.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpfamily_show/3" for 127.0.0.1 at 2011-12-11 19:13:12 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqpgroups" SET "indx" = 0, "updated_at" = '2011-12-11 08:13:12.328125' WHERE "eqpgroups"."id" = 9[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (15.6ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (93.8ms)
+Completed 200 OK in 391ms (Views: 93.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpfamily_show/4" for 127.0.0.1 at 2011-12-11 19:13:14 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (265.6ms)
+Completed 200 OK in 328ms (Views: 265.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpfamily_show/5" for 127.0.0.1 at 2011-12-11 19:13:15 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (234.4ms)
+Completed 200 OK in 297ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/5" for 127.0.0.1 at 2011-12-11 19:14:08 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (15.6ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Completed 200 OK in 359ms (Views: 203.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_show/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-11 19:14:11 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (234.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (46.9ms)
+Completed 200 OK in 562ms (Views: 312.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-11 19:14:11 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/5?eqpfamily_id=2" for 127.0.0.1 at 2011-12-11 19:14:13 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"5"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (171.9ms)
+Completed 200 OK in 281ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_new/5" for 127.0.0.1 at 2011-12-11 19:14:15 +1100
+  Processing by AdminController#eqptype_new as HTML
+  Parameters: {"id"=>"5"}
+Rendered admin/eqptype_new.html.erb within layouts/admin (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (171.9ms)
+Completed 200 OK in 328ms (Views: 312.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/eqptype_create/5" for 127.0.0.1 at 2011-12-11 19:14:22 +1100
+  Processing by AdminController#eqptype_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFmgD9tPFh5m60b+q2jYqbPaQj3dWTDmkXpq1GyvVVY=", "eqptype"=>{"name"=>"цуке", "img01"=>#<ActionDispatch::Http::UploadedFile:0x2c102e8 @original_filename="shkaph2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqptype[img01]\"; filename=\"shkaph2.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/DOCUME~1/Devel/LOCALS~1/Temp/RackMultipart20111211-2972-ay76l0>>}, "commit"=>"Добавить", "id"=>"5"}
+[32mCommand[0m :: identify -format %wx%h "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2972-fc0n5.jpg[0]"
+[32mCommand[0m :: convert "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2972-fc0n5.jpg[0]" -resize "150x150" "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2972-fc0n520111211-2972-1q7ihms"
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "5"]]
+Binary data inserted for `string` type on column `img01_content_type`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "eqptypes" ("created_at", "eqpgroup_id", "img01_content_type", "img01_file_name", "img01_file_size", "img01_updated_at", "indx", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sun, 11 Dec 2011 08:14:24 UTC +00:00], ["eqpgroup_id", 5], ["img01_content_type", "image/jpeg"], ["img01_file_name", "shkaph2.jpg"], ["img01_file_size", 222165], ["img01_updated_at", Sun, 11 Dec 2011 08:14:23 UTC +00:00], ["indx", 9999], ["name", "цуке"], ["updated_at", Sun, 11 Dec 2011 08:14:24 UTC +00:00]]
+[paperclip] Saving attachments.
+[paperclip] saving /original/shkaph2.jpg
+[paperclip] saving /small/shkaph2.jpg
+[32mCommand[0m :: file -b --mime "C:/DOCUME~1/Devel/LOCALS~1/Temp/stream20111211-2972-fc0n520111211-2972-1q7ihms"
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/admin/eqpgroup_show/5?eqpfamily_id=2
+Completed 302 Found in 16125ms
+
+
+Started GET "/admin/eqpgroup_show/5?eqpfamily_id=2" for 127.0.0.1 at 2011-12-11 19:14:39 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"5"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36m (0.0ms)[0m  [1mUPDATE "eqptypes" SET "indx" = 0, "updated_at" = '2011-12-11 08:14:39.312500' WHERE "eqptypes"."id" = 8[0m
+[paperclip] Saving attachments.
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (46.9ms)
+Completed 200 OK in 516ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpgroup_show/5?eqpfamily_id=2" for 127.0.0.1 at 2011-12-11 19:16:06 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"5"}
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+[paperclip] Saving attachments.
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1[0m
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (62.5ms)
+Completed 200 OK in 297ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqptype_show/4?eqpgroup_id=10" for 127.0.0.1 at 2011-12-11 19:16:09 +1100
+  Processing by AdminController#eqptype_show as HTML
+  Parameters: {"eqpgroup_id"=>"10", "id"=>"4"}
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = 10 LIMIT 1
+  [1m[36mEqp Load (0.0ms)[0m  [1mSELECT "eqps".* FROM "eqps" WHERE "eqps"."eqptype_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1
+Rendered admin/eqptype_show.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (62.5ms)
+Completed 200 OK in 375ms (Views: 109.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqptype_show/3?eqpgroup_id=10" for 127.0.0.1 at 2011-12-11 19:16:10 +1100
+  Processing by AdminController#eqptype_show as HTML
+  Parameters: {"eqpgroup_id"=>"10", "id"=>"3"}
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = 10 LIMIT 1[0m
+  [1m[35mEqp Load (0.0ms)[0m  SELECT "eqps".* FROM "eqps" WHERE "eqps"."eqptype_id" = 3 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1[0m
+Rendered admin/eqptype_show.html.erb within layouts/admin (46.9ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (62.5ms)
+Completed 200 OK in 375ms (Views: 296.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-11 19:16:12 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (15.6ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (140.6ms)
+Completed 200 OK in 266ms (Views: 171.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqptype_show/6?eqpgroup_id=17" for 127.0.0.1 at 2011-12-11 19:16:17 +1100
+  Processing by AdminController#eqptype_show as HTML
+  Parameters: {"eqpgroup_id"=>"17", "id"=>"6"}
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = 17 LIMIT 1[0m
+  [1m[35mEqp Load (0.0ms)[0m  SELECT "eqps".* FROM "eqps" WHERE "eqps"."eqptype_id" = 6 ORDER BY indx
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 11 LIMIT 1[0m
+Rendered admin/eqptype_show.html.erb within layouts/admin (46.9ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (62.5ms)
+Completed 200 OK in 250ms (Views: 171.9ms | ActiveRecord: 0.0ms)

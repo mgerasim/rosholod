@@ -8,8 +8,8 @@
 	<tr>
 		<td><%= eqptype.name %></td>
 		<td><%= image_tag eqptype.img01.url(:small) %></td>
-		<td><%= link_to 'Показать', :action => 'eqptype_show', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id  %>
-		<td><%= link_to 'Редактировать', :action => 'eqptype_edit', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id  %>
+		<td><%= link_to 'Показать', :action => 'eqptype_show', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id  %></td>
+		<td><%= link_to 'Редактировать', :action => 'eqptype_edit', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id  %></td>
 		<td><%= link_to 'Удалить', { :action => 'eqptype_destroy', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id }, :confirm => 'Вы уверены?', :method => :post  %></td>
 		<td><%= link_to 'Вверх', :action => 'eqptype_moveup', :eqpgroup_id => @eqpgroup.id, :id => eqptype.id %></td>
 	</tr>
