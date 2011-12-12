@@ -1,4 +1,6 @@
 Rosholod::Application.routes.draw do
+  get "store/index"
+
   get "pages/home"
 
   resources :users

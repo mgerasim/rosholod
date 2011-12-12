@@ -1,0 +1,10 @@
+<h1><%= @eqpgroup.name %></h1>
+<br>
+<table>
+	<% @eqpgroup.eqptypes.each do |eqptype| %>
+	<tr>
+		<td><%= eqptype.name %></td>
+		<td><%= image_tag eqptype.img01.url(:small) %></td>
+	</tr>
+	<% end %>
+</table>

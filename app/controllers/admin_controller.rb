@@ -141,8 +141,8 @@ class AdminController < ApplicationController
 
 	def eqpgroup_show
 		@title = "Просмотр элемента бокового меню второго уровня"
-		@eqpfamily = Eqpfamily.find(params[:eqpfamily_id])
 		@eqpgroup = Eqpgroup.find(params[:id])
+		@eqpfamily = @eqpgroup.eqpfamily
 		@eqpgroup.eqptypes.each do |eqptype|
 			eqptype.indx = @eqpgroup.eqptypes.index(eqptype)
 			eqptype.indx = eqptype.indx * 2
@@ -186,11 +186,11 @@ class AdminController < ApplicationController
 	end
 
 	def eqptype_destroy
-		@eqpgroup = Eqpgroup.find(params[:id])
-		@eqptype = Eqptype.find(params[:eqptype])
+		@eqptype = Eqptype.find(params[:id])
+		eqpgroup = @eqptype.eqpgroup
 		@eqptype.destroy
 		respond_to do |format|
-      		format.html { redirect_to( :action => "eqpgroup_show", :id => @eqpgroup.id) }      	
+      		format.html { redirect_to( :action => "eqpgroup_show", :id => eqpgroup.id) }      	
     	end
 	end
 

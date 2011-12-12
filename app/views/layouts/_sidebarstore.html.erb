@@ -1,0 +1,14 @@
+<ol>
+<% menu.each do |eqpfamily| %>	
+	<li> 
+		<%= eqpfamily.name %> 
+		<ul>
+			<% eqpfamily.eqpgroups.each do |eqpgroup| %>
+				<li>
+					<%= link_to eqpgroup.name, :action => 'eqpgroup_show',  :id => eqpgroup.id  %>
+				</li>
+			<% end %>
+		</ul>
+	</li>	
+<% end %>
+</ol>
