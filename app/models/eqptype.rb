@@ -3,7 +3,7 @@ class Eqptype < ActiveRecord::Base
     
 
 	belongs_to :eqpgroup
-	has_many :eqps, :order => "indx"
+	has_many :eqps, :order => "indx", :dependent => :destroy
 	has_attached_file :img01, :styles => { :small => "150x150" },
 			  :storage => :s3,
 #			  :bucket => 'rosholod-devel',

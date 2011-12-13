@@ -1,6 +1,6 @@
 class Eqpgroup < ActiveRecord::Base
 	belongs_to :eqpfamily
-	has_many :eqptypes, :order => "indx"
+	has_many :eqptypes, :order => "indx", :dependent => :destroy
 	def before_save(record)
 	    record.pn = 0
 	    record.pn = record.pn+1 if record.p1.nil?
