@@ -1,45 +1,45 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <title>Росхолод</title>
+  <title><%= title %></title>
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
                                                                                       
 </head>
 <body>
     <div class="container">
-	<div id="header" class="span-24 last">
-	    <div id="contact" class="span-10" first>
-		<h4 class="alt">
-		    г.Хабаровск<br>
-		    ул. Комсомольская, 96<br>
-		    тел.:
-		</h4>
-	    </div>
-	    <div id="logo" class="span-10 right last">
-		<img src="/images/rosholod_logo.jpg" width="365" height="80">
-	    </div>
-	</div>
-	<hr>
-	<div id="subheader" class="span-24 last">
-	    <h3 class="alt">Полный комплекс услуг обслуживания холодильного оборудования для магазинов и складов потребительских товаров</h3>
-	</div>
-	<hr>
-	<div id="navmain" class="span-24 last">
-	    Главная | Каталог | Услуги | Контакты | Отправить письмо
-	</div>
-	<hr>
-	<div id="wrapper">
-	<div class="span-6 first" id="sidebar">
-	<ul>
-	    <%= render 'layouts/sidebarstore' %>'
-	</ul>
-	</div>
-	<div id="content" class="span-17 last">			
-	    <%= yield %>
-	</div>
-	</div>
-	<hr>
+		<div id="header" class="span-24 last">
+		    <div id="contact" class="span-10" first>
+			<h4 class="alt">
+			    г.Хабаровск<br>
+			    ул. Комсомольская, 96<br>
+			    тел.:
+			</h4>
+		    </div>
+		    <div id="logo" class="span-10 right last">
+			<img src="/images/rosholod_logo.jpg" width="365" height="80">
+		    </div>
+		</div>
+		<hr>
+		<div id="subheader" class="span-24 last">
+		    <h3 class="alt">Полный комплекс услуг обслуживания холодильного оборудования для магазинов и складов продуктов питания</h3>
+		</div>
+		<hr>
+		<div id="navmain" class="span-24 last">
+		    Главная | Каталог | Услуги | Контакты | Отправить письмо
+		</div>
+		<hr>
+		<div id="wrapper">
+			<div class="span-6 first" id="sidebar">
+				<ul>
+				    <%= render 'layouts/sidebarstore' %>'
+				</ul>	
+			</div>
+			<div id="content" class="span-17 last">			
+			    <%= yield %>
+			</div>
+		</div>
+		<hr>
     </div>
 </body>
 </html>
