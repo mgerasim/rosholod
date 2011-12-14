@@ -13804,3 +13804,270 @@ Completed 200 OK in 555ms (Views: 484.2ms | ActiveRecord: 16.2ms)
 
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-13 16:22:36 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store" for 172.30.4.156 at 2011-12-14 12:38:43 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (358.3ms)
+Completed 200 OK in 383ms (Views: 371.7ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/9" for 172.30.4.156 at 2011-12-14 12:38:47 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mEqptype Load (2.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (343.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[35mEqpfamily Load (1.5ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (2.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (103.9ms)
+Completed 200 OK in 528ms (Views: 458.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 172.30.4.156 at 2011-12-14 12:38:49 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (296.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (93.9ms)
+Completed 200 OK in 463ms (Views: 408.1ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:50 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/6" for 172.30.4.156 at 2011-12-14 12:38:52 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mEqptype Load (1.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (350.7ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[35mEqpfamily Load (1.9ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.9ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (109.9ms)
+Completed 200 OK in 540ms (Views: 470.6ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/5" for 172.30.4.156 at 2011-12-14 12:38:54 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (266.9ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[36mEqpfamily Load (1.6ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (1.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (103.0ms)
+Completed 200 OK in 448ms (Views: 383.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:54 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/6" for 172.30.4.156 at 2011-12-14 12:38:56 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (223.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[35mEqpfamily Load (1.5ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (2.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (3.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (228.3ms)
+Completed 200 OK in 656ms (Views: 461.8ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:57 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/store/eqpgroup_show/5" for 172.30.4.156 at 2011-12-14 12:38:58 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (131.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[36mEqpfamily Load (1.5ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (237.0ms)
+Completed 200 OK in 447ms (Views: 385.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:38:59 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (4ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 172.30.4.156 at 2011-12-14 12:39:00 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mEqptype Load (1.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (353.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.8ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (101.8ms)
+Completed 200 OK in 533ms (Views: 469.6ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:39:01 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 172.30.4.156 at 2011-12-14 12:39:20 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (34.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (1.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (466.8ms)
+Completed 200 OK in 736ms (Views: 511.3ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:39:21 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpfamily_show/5" for 172.30.4.156 at 2011-12-14 12:39:23 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (2.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (22.4ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.7ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (1.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (1.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (1.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (333.7ms)
+Completed 200 OK in 726ms (Views: 377.7ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:39:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpgroup_show/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-14 12:39:25 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 5 LIMIT 1[0m
+  [1m[35mEqptype Load (2.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+[paperclip] Saving attachments.
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (49.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[36mEqpfamily Load (1.5ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (1.9ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (90.9ms)
+Completed 200 OK in 608ms (Views: 162.5ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:39:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqptype_show/21?eqpgroup_id=9" for 172.30.4.156 at 2011-12-14 12:39:30 +1100
+  Processing by AdminController#eqptype_show as HTML
+  Parameters: {"eqpgroup_id"=>"9", "id"=>"21"}
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = 9 LIMIT 1
+  [1m[36mEqp Load (1.6ms)[0m  [1mSELECT "eqps".* FROM "eqps" WHERE "eqps"."eqptype_id" = 21 ORDER BY indx[0m
+  [1m[35mEqpfamily Load (1.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 5 LIMIT 1
+Rendered admin/eqptype_show.html.erb within layouts/admin (147.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+  [1m[36mEqpfamily Load (5.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (1.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (1.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (103.2ms)
+Completed 200 OK in 745ms (Views: 378.4ms | ActiveRecord: 33.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-14 12:39:31 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
