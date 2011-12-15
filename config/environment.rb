@@ -18,15 +18,24 @@ Rosholod::Application.initialize!
 
 #config.action_mailer.raise_delivery_errors = true
 
-ActionMailer::Base.smtp_settings = {
-  :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-      :authentication => :plain,
-        :user_name      => ENV['SENDGRID_USERNAME'],
-          :password       => ENV['SENDGRID_PASSWORD'],
-            :domain         => 'heroku.com'
-            }
-         ActionMailer::Base.delivery_method = :smtp
+#ActionMailer::Base.smtp_settings = {
+#    :address        => 'smtp.sendgrid.net',
+#    :port           => '587',
+#    :authentication => :plain,
+#    :user_name      => ENV['SENDGRID_USERNAME'],
+#    :password       => ENV['SENDGRID_PASSWORD'],
+#    :domain         => 'heroku.com'
+#}
+#ActionMailer::Base.delivery_method = :smtp
+
+#  ActionMailer::Base.smtp_settings = {
+#    :address  => "172.30.1.200",
+#    :port  => 25,
+#    :user_name            => 'GerasimovMN@khv.dv.rt.ru',
+#    :password             => 'gerasimovmn123',  
+#    :authentication       => "plain",  
+#    :enable_starttls_auto => false   
+ # }
 
 
 Pony.options = {

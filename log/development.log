@@ -19483,3 +19483,267 @@ ActionView::MissingTemplate (Missing template pages/sendmail, application/sendma
   
 
 Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-16 09:36:52 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (15.5ms)
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+Rendered layouts/_navmenu.html.erb (108.4ms)
+Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 330ms (Views: 328.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 09:36:56 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 200 OK (9ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 09:37:01 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (10.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 09:37:09 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"lkj", "phone"=>"lk;j", "email"=>"ждло", "message"=>"we", "commit"=>"Отправить"}
+
+Sent mail to mgerasim.mail@gmail.com (30296ms)
+Date: Fri, 16 Dec 2011 09:37:10 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4eea76965496d_d6d19aa1689195b@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 30815ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-16 09:40:06 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (18.5ms)
+Rendered layouts/_stylesheets.html.erb (1.8ms)
+Rendered layouts/_navmenu.html.erb (10.9ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 230ms (Views: 228.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 09:40:11 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (8.7ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 09:40:17 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"qwer", "phone"=>"rwet", "email"=>"ert", "message"=>"ert укце ", "commit"=>"Отправить"}
+
+Sent mail to mgerasim.mail@gmail.com (201ms)
+Date: Fri, 16 Dec 2011 09:40:18 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4eea77527dbf6_db61cab768967dd@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 708ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-16 09:41:48 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (118.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 149ms (Views: 145.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 09:41:49 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (6.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 09:41:55 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"ук", "phone"=>"йцук", "email"=>"йцук", "message"=>"йцук we ", "commit"=>"Отправить"}
+
+Sent mail to GerasimovMN@khv.dv.rt.ru (33ms)
+Date: Fri, 16 Dec 2011 09:41:55 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: GerasimovMN@khv.dv.rt.ru
+Message-ID: <4eea77b34ebc2_db61a4bd9c968c4@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 90ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-16 10:23:25 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (16.9ms)
+Rendered layouts/_stylesheets.html.erb (0.6ms)
+Rendered layouts/_navmenu.html.erb (11.4ms)
+Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 234ms (Views: 231.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 10:23:29 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (3.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (13.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 10:23:37 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"rt", "phone"=>"ert", "email"=>"ertert", "message"=>"ertetr", "commit"=>"Отправить"}
+
+Sent mail to GerasimovMN@khv.dv.rt.ru (190ms)
+Date: Fri, 16 Dec 2011 10:23:38 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: GerasimovMN@khv.dv.rt.ru
+Message-ID: <4eea817a187f0_df51bb078c4385e@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 536ms
+
+Net::SMTPAuthenticationError (535 (518) account has been moved to a remote system
+):
+  app/controllers/pages_controller.rb:26:in `sendmail'
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-16 10:25:35 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (115.0ms)
+Rendered layouts/_stylesheets.html.erb (0.7ms)
+Rendered layouts/_navmenu.html.erb (8.5ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 325ms (Views: 323.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 10:25:40 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (3.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 10:25:46 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"tyer", "phone"=>"try кен", "email"=>"екнек ", "message"=>"кеун ", "commit"=>"Отправить"}
+
+Sent mail to GerasimovMN@khv.dv.rt.ru (187ms)
+Date: Fri, 16 Dec 2011 10:25:47 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: GerasimovMN@khv.dv.rt.ru
+Message-ID: <4eea81fb30899_f501c80e149849c@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 528ms
+
+Net::SMTPAuthenticationError (535 (518) account has been moved to a remote system
+):
+  app/controllers/pages_controller.rb:26:in `sendmail'
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (98.6ms)
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (111.6ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-16 10:26:59 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (14.8ms)
+Rendered layouts/_stylesheets.html.erb (0.6ms)
+Rendered layouts/_navmenu.html.erb (9.7ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 212ms (Views: 211.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 10:27:03 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (8.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 10:27:11 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"уке", "phone"=>"ку уке", "email"=>"уке ", "message"=>"уке уке", "commit"=>"Отправить"}
+
+Sent mail to GerasimovMN@khv.dv.rt.ru (208ms)
+Date: Fri, 16 Dec 2011 10:27:11 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: GerasimovMN@khv.dv.rt.ru
+Message-ID: <4eea824fafb78_f72196b2b0695ad@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 675ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
