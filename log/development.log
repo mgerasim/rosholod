@@ -18930,3 +18930,388 @@ Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-15 16:50:08 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:00:05 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 641ms (Views: 640.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:00:13 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (203ms)
+
+
+Started POST "/pages/sendmail" for 127.0.0.1 at 2011-12-15 21:00:53 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2mr2n+8Qs8djAxcds4H0C7DqWex2XKLDGkNotJKXgqg=", "subject"=>"erwq", "mailtype"=>"3", "description"=>"qwer", "commit"=>"Отправить"}
+
+Sent mail to GerasimovMN@khv.dv.rt.ru (5688ms)
+Date: Thu, 15 Dec 2011 21:00:54 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: GerasimovMN@khv.dv.rt.ru
+Message-ID: <4ee9c556baeb9_c08357e2f8539d1@microsof-a3fc75.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 6875ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "D:/Developer/work/rosholod/app/views"
+):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:16:46 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (93.8ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:16:46 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:24:09 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 641ms (Views: 640.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:24:16 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:25:16 +1100
+  Processing by PagesController#postmail as HTML
+ERROR: compiling _app_views_pages_postmail_html_erb___143879297_23107104 RAISED D:/Developer/work/rosholod/app/views/pages/postmail.html.erb:27: syntax error, unexpected '=', expecting ')'
+...t_field_tag "fullname", :size = >80 );@output_buffer.safe_co...
+...                               ^
+D:/Developer/work/rosholod/app/views/pages/postmail.html.erb:35: syntax error, unexpected '=', expecting ')'
+...text_field_tag "phone", :size = >80 );@output_buffer.safe_co...
+...                               ^
+D:/Developer/work/rosholod/app/views/pages/postmail.html.erb:42: syntax error, unexpected '=', expecting ')'
+...text_field_tag "email", :size = >180 );@output_buffer.safe_c...
+...                               ^
+Function body:           def _app_views_pages_postmail_html_erb___143879297_23107104(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "pages/postmail";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  form_tag :action => 'sendmail' do  @output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+	<table>
+		<tr>
+			<td> <h4>Письмо с сайта</h4>
+			</td>
+		</tr>
+	</table>
+	
+	<table class="form-table data-table" style="font-size: 12px;" border="0">
+		<tbody>
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">
+								Тема письма: <font color=\'red\'><span class=\'form-required starrequired\'>*</span></font>
+
+				</td>
+				<td style="padding:6px;">
+						');@output_buffer.append= ( select_tag("mailtype", options_for_select([['Письмо руководителю', '1'],
+                       													['Письмо менеджеру', '2'],
+                       													['Письмо в группу сервиса','3']], '3')) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</td>			
+			</tr>
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">	Ф.И.О: <font color=\'red\'><span class=\'form-required starrequired\'>*</span></font>
+				</td>
+				<td style="padding:6px;">	');@output_buffer.append= ( text_field_tag "fullname", :size = >80 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</td>
+			</tr>
+
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">	Телефон: <font color=\'red\'><span class=\'form-required starrequired\'>*</span></font>
+				</td>
+				<td style="padding:6px;">');@output_buffer.append= ( text_field_tag "phone", :size = >80 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</td>
+			</tr>
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">E-mail: <font color=\'red\'><span class=\'form-required starrequired\'>*</span></font>
+				</td>
+				<td style="padding:6px;">');@output_buffer.append= ( text_field_tag "email", :size = >180 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</td>
+			</tr>
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">
+								Сообщение: <font color=\'red\'><span class=\'form-required starrequired\'>*</span></font>
+							</td>
+				<td style="padding:6px;">');@output_buffer.append= ( text_area_tag "message", "", :size=>"60x20" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td></td>
+				<td style="padding: 6px">
+					');@output_buffer.append= ( submit_tag 'Отправить' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('					<p><font color=\'red\'><span class=\'form-required starrequired\'>*</span></font> - Поля, обязательные для заполнения</p>
+				</th>
+			</tr>
+		</tfoot>		
+	</table>
+
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:309:in `module_eval'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:309:in `compile'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:217:in `compile!'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:170:in `block in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:55:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:169:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `block in instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:9:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/renderer.rb:17:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:120:in `_render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:99:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rendering.rb:16:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/base.rb:167:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:416:in `_run__1015317188__process_action__581832141__callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rescue.rb:17:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `block in instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/base.rb:121:in `process'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:45:in `process'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal.rb:193:in `dispatch'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal.rb:236:in `block in action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:65:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:29:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:532:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/flash.rb:247:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/query_cache.rb:64:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/railties-3.1.2/lib/rails/rack/logger.rb:13:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/static.rb:53:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/railties-3.1.2/lib/rails/engine.rb:456:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/railties-3.1.2/lib/rails/rack/log_tailer.rb:14:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/postmail.html.erb within layouts/pages (203.1ms)
+Completed 500 Internal Server Error in 219ms
+
+ActionView::Template::Error (D:/Developer/work/rosholod/app/views/pages/postmail.html.erb:27: syntax error, unexpected '=', expecting ')'
+...t_field_tag "fullname", :size = >80 );@output_buffer.safe_co...
+...                               ^
+D:/Developer/work/rosholod/app/views/pages/postmail.html.erb:35: syntax error, unexpected '=', expecting ')'
+...text_field_tag "phone", :size = >80 );@output_buffer.safe_co...
+...                               ^
+D:/Developer/work/rosholod/app/views/pages/postmail.html.erb:42: syntax error, unexpected '=', expecting ')'
+...text_field_tag "email", :size = >180 );@output_buffer.safe_c...
+...                               ^):
+    24: 			<tr>
+    25: 				<td style="width:150px;padding:6px; text-align:right;">	Ф.И.О: <font color='red'><span class='form-required starrequired'>*</span></font>
+    26: 				</td>
+    27: 				<td style="padding:6px;">	<%= text_field_tag "fullname", :size = >80 %>
+    28: 				</td>
+    29: 			</tr>
+    30: 
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:25:38 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:25:38 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:34:37 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 750ms (Views: 750.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:34:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:42:12 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:42:12 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:42:21 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:42:21 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:43:15 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (109.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 578ms (Views: 578.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:43:22 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started POST "/pages/sendmail" for 127.0.0.1 at 2011-12-15 21:45:15 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2mr2n+8Qs8djAxcds4H0C7DqWex2XKLDGkNotJKXgqg=", "mailtype"=>"1", "fullname"=>"tryt", "phone"=>"rtyr", "email"=>"rtyyyyyyy", "message"=>"asf", "commit"=>"Отправить"}
+
+Sent mail to mgerasim.mail@gmail.com (5688ms)
+Date: Thu, 15 Dec 2011 21:45:16 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4ee9cfbcc65d4_b641711848628c9@microsof-a3fc75.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 6891ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "D:/Developer/work/rosholod/app/views"
+):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-12-15 21:46:20 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:46:20 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-15 21:46:21 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:46:21 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)

@@ -1,27 +1,65 @@
-<h1>Отправить письмо с сайта</h1>
-<p>Введите Ваше сообщение</p>
-
 <%= form_tag :action => 'sendmail' do  %>
 
-<p>
-    Тема сообщения:<br />
-    <%= text_field_tag "subject" %>
-</p>
+	<table>
+		<tr>
+			<td> <h4>Письмо с сайта</h4>
+			</td>
+		</tr>
+	</table>
+	
+	<table class="form-table data-table" style="font-size: 12px;" border="0">
+		<tbody>
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">
+								Тема письма: <font color='red'><span class='form-required starrequired'>*</span></font>
 
-<p>
-   Тип сообщения: <br />
-  <%= select_tag("mailtype", options_for_select([['Письмо руководителю', '1'],
-                       ['Письмо менеджеру', '2'],['Письмо в группу сервиса','3']], '3')) %>
-      </p>
+				</td>
+				<td style="padding:6px;">
+						<%= select_tag("mailtype", options_for_select([['Письмо руководителю', '1'],
+                       													['Письмо менеджеру', '2'],
+                       													['Письмо в группу сервиса','3']], '3')) %>
+				</td>			
+			</tr>
 
-<p>
-    Текст письма:<br />
-    <%= text_area_tag "description", "", :size=>"50x20" %>
-</p>
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">	Ф.И.О: <font color='red'><span class='form-required starrequired'>*</span></font>
+				</td>
+				<td style="padding:6px;">	<%= text_field_tag :fullname, '', :size => 60 %>
+				</td>
+			</tr>
 
 
-<p>
-    <%= submit_tag 'Отправить' %>
-</p>
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">	Телефон: <font color='red'><span class='form-required starrequired'>*</span></font>
+				</td>
+				<td style="padding:6px;"><%= text_field_tag :phone, '', :size => 60 %>
+				</td>
+			</tr>
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">E-mail: <font color='red'><span class='form-required starrequired'>*</span></font>
+				</td>
+				<td style="padding:6px;"><%= text_field_tag :email,'', :size => 60 %>
+				</td>
+			</tr>
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">
+								Сообщение: <font color='red'><span class='form-required starrequired'>*</span></font>
+							</td>
+				<td style="padding:6px;"><%= text_area_tag "message", "", :size=>"60x20" %>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td></td>
+				<td style="padding: 6px">
+					<%= submit_tag 'Отправить' %>
+					<p><font color='red'><span class='form-required starrequired'>*</span></font> - Поля, обязательные для заполнения</p>
+				</th>
+			</tr>
+		</tfoot>		
+	</table>
 
 <% end %>
