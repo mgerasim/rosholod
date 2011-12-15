@@ -27,4 +27,17 @@ Rosholod::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  ActionMailer::Base.smtp_settings = {
+    :address  => "172.30.1.200",
+    :port  => 25,
+#    :user_name            => 'GerasimovMN@khv.dv.rt.ru',
+#    :password             => 'gerasimovmn123',  
+#    :authentication       => "plain",  
+    :enable_starttls_auto => false
+    
+  }
+  
+  config.action_mailer.raise_delivery_errors = true
+  
 end

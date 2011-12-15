@@ -8,30 +8,36 @@
 </head>
 <body>
     <div class="container">
-	<!– header –>
-	<div class="header">
-		Header<br><br>
-	</div>
-	 
-	<!– content –>
-	
-	<div class="span-8 ">
-		<div class="title-content">
-			Меню
+		<!– header –>
+		<header class="span-24 last">
+		    <div id="contact" class="span-10" first>
+				<h4 class="alt">
+				    г.Хабаровск<br>
+				    ул. Комсомольская, 96<br>
+				    тел.:
+				</h4>
+		    </div>
+		    <div id="logo" class="span-10 right last">
+				<img src="/images/rosholod_logo.jpg" width="365" height="80">
+		    </div>
+		</header>
+	 	<hr>
+		<div id="subheader" class="span-24 last">
+		    <h3 class="alt">Админиcтрирование сайта ЗАО "Росхолод"</h3>
 		</div>
-		<%= render 'layouts/sidebaradmin' %>
-	</div>
-	
-	<div class="span-16 last">
-	    <%= yield %>
-	</div>
-	 
-
-	<!– footer –>
-	<div class="footer">
-	    Тех помощь: mgerasim.mail@gmail.com
-	</div>
-	
+		<hr>
+		<!– content –>
+		<div id="wrapper">
+			<div class="span-6 first" id="sidebar">
+				<ul>
+				    <%= render 'layouts/sidebaradmin' %>'
+				</ul>	
+			</div>
+			<div id="content" class="span-17 last">			
+			    <%= yield %>
+			</div>
+		</div>
+		<%= render 'layouts/footer' %>
     </div>
 </body>
 </html>

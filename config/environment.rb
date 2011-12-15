@@ -5,5 +5,3 @@ require File.expand_path('../application', __FILE__)
 Rosholod::Application.initialize!
 #AWS::S3::DEFAULT_HOST.replace 's3-website-ap-northeast-1.amazonaws.com'
 
-
-

@@ -1,5 +1,5 @@
 <ol>
-<% menu.each do |eqpfamily| %>	
+<% Eqpfamily.find(:all, :order=>"indx").each do |eqpfamily| %>	
 	<li> 
 		<%= eqpfamily.name %> 
 		<ul>

@@ -7,5 +7,5 @@ class StoreController < ApplicationController
     @title = "Просмотр элемента бокового меню второго уровня"
     @eqpgroup = Eqpgroup.find(params[:id])
   end
-
+  
 end

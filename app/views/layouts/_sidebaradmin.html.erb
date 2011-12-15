@@ -1,5 +1,5 @@
 <ol>
-<% menu.each do |eqpfamily| %>	
+<% Eqpfamily.find(:all, :order => "indx").each do |eqpfamily| %>	
 	<li>
 		<%= link_to eqpfamily.name, :action => 'eqpfamily_show', :id => eqpfamily.id %>		
 		<ul>

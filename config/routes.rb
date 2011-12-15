@@ -4,6 +4,15 @@ Rosholod::Application.routes.draw do
   get "pages/home"
 
   resources :users
+  
+  match '/main',	:to => 'pages#main'
+  match '/',		:to => 'pages#main'
+  match '/contact',	:to => 'pages#contact'
+  match '/service',	:to => 'store#index'
+  match '/catalog',	:to => 'store#index'
+  match '/postmail',	:to => 'pages#postmail'
+  
+  root :to => 'pages#main'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
