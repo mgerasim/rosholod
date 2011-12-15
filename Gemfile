@@ -56,3 +56,5 @@ gem 'taps'
 gem 'paperclip'
 gem 'aws-s3', :require => 'aws/s3'
 #gem 'right_aws'
+
+gem 'pony'

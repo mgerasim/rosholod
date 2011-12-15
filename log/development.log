@@ -19373,3 +19373,113 @@ Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 08:33:46 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-16 09:16:51 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (16.9ms)
+Rendered layouts/_stylesheets.html.erb (0.7ms)
+Rendered layouts/_navmenu.html.erb (8.3ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 225ms (Views: 221.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 09:16:54 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (9.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 171ms (Views: 167.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 09:16:55 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (10ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 09:17:09 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"wer", "phone"=>"ewrt", "email"=>"erwt", "message"=>"erwtwer", "commit"=>"Отправить"}
+
+Sent mail to mgerasim.mail@gmail.com (30306ms)
+Date: Fri, 16 Dec 2011 09:17:10 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4eea71e63c3c0_c7119335f41303b@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 30722ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.9ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 09:20:02 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"1", "fullname"=>"wer", "phone"=>"ewrt", "email"=>"erwt", "message"=>"erwtwerwqre w erw", "commit"=>"Отправить"}
+
+Sent mail to mgerasim.mail@gmail.com (30027ms)
+Date: Fri, 16 Dec 2011 09:20:02 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4eea7292f1f30_c711ad9e581318d@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 30073ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-16 09:24:17 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (25.8ms)
+Rendered layouts/_stylesheets.html.erb (0.7ms)
+Rendered layouts/_navmenu.html.erb (9.0ms)
+Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 240ms (Views: 238.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 09:24:20 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-16 09:24:25 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JHCr6jO7ohzwF4gxjmcY0BOZqIjGVvErM0n/jj3z0TA=", "mailtype"=>"3", "fullname"=>"435", "phone"=>"345", "email"=>"3453", "message"=>"345345", "commit"=>"Отправить"}
+
+Sent mail to mgerasim.mail@gmail.com (30201ms)
+Date: Fri, 16 Dec 2011 09:24:26 +1100
+From: GerasimovMN@khv.dv.rt.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4eea739a8b287_cca1942edc78671@T214.mail>
+Subject: Hello
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Completed 500 Internal Server Error in 30703ms
+
+ActionView::MissingTemplate (Missing template pages/sendmail, application/sendmail with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/usr/work/rosholod/app/views"
+):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.0ms)

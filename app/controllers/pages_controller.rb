@@ -24,6 +24,7 @@ class PagesController < ApplicationController
 	message = "DDDDDD"
 	mail = Postmailer.contact(recipient, subject, message)
 	mail.deliver
+	
 #	return if request.xhr?
 #	render :text => 'Message sent successfully'
   end
