@@ -19315,3 +19315,61 @@ Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-15 21:46:21 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 172.30.4.156 at 2011-12-16 08:33:28 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (49.4ms)
+Rendered layouts/_stylesheets.html.erb (12.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (726.0ms)
+Rendered layouts/_footer.html.erb (4.6ms)
+Completed 200 OK in 1352ms (Views: 970.8ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 08:33:31 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started GET "/store" for 172.30.4.156 at 2011-12-16 08:33:41 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (4.2ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (198.8ms)
+Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 361ms (Views: 356.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 08:33:42 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-16 08:33:46 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.7ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-16 08:33:46 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
