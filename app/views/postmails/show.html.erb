@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Recipiend:</b>
+  <%= @postmail.recipiend %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @postmail.subject %>
+</p>
+
+<p>
+  <b>Fullname:</b>
+  <%= @postmail.fullname %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @postmail.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @postmail.email %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @postmail.message %>
+</p>
+
+
+<%= link_to 'Edit', edit_postmail_path(@postmail) %> |
+<%= link_to 'Back', postmails_path %>

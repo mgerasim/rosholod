@@ -1,0 +1,28 @@
+require 'spec_helper'
+
+describe "postmails/new.html.erb" do
+  before(:each) do
+    assign(:postmail, stub_model(Postmail,
+      :recipiend => "MyString",
+      :subject => "MyString",
+      :fullname => "MyString",
+      :phone => "MyString",
+      :email => "MyString",
+      :message => "MyString"
+    ).as_new_record)
+  end
+
+  it "renders new postmail form" do
+    render
+
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "form", :action => postmails_path, :method => "post" do
+      assert_select "input#postmail_recipiend", :name => "postmail[recipiend]"
+      assert_select "input#postmail_subject", :name => "postmail[subject]"
+      assert_select "input#postmail_fullname", :name => "postmail[fullname]"
+      assert_select "input#postmail_phone", :name => "postmail[phone]"
+      assert_select "input#postmail_email", :name => "postmail[email]"
+      assert_select "input#postmail_message", :name => "postmail[message]"
+    end
+  end
+end
