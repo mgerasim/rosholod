@@ -42,6 +42,7 @@ group :development, :test do
   gem 'sqlite3-ruby', '1.3.0', :require => 'sqlite3'
   gem 'sqlite3'
   gem 'rspec-rails', '2.6.1'
+  gem 'annotate', '2.4.0'
 end
 
 group :production, :staging do

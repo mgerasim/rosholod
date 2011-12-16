@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.1.2)
     activesupport (3.1.2)
       multi_json (~> 1.0)
+    annotate (2.4.0)
     ansi (1.4.1)
     arel (2.2.1)
     aws-s3 (0.6.2)
@@ -156,6 +157,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  annotate (= 2.4.0)
   aws-s3
   coffee-rails (~> 3.1.1)
   execjs

@@ -1,9 +1,12 @@
 Rosholod::Application.routes.draw do
+  
+
   get "store/index"
 
   get "pages/home"
 
   resources :users
+  
   
   match '/main',	:to => 'pages#main'
   match '/',		:to => 'pages#main'
@@ -14,6 +17,9 @@ Rosholod::Application.routes.draw do
   
   root :to => 'pages#main'
 
+  resources :postmails
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,4 +1,17 @@
-<%= form_tag :action => 'sendmail' do  %>
+
+<%= form_for @postmail, :url => {  :action => :sendmail }  do |f| %>
+
+  <% if @postmail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postmail.errors.count, "error") %> prohibited this postmail from being saved:</h2>
+
+      <ul>
+      <% @postmail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 	<table>
 		<tr>
@@ -9,22 +22,11 @@
 	
 	<table class="form-table data-table" style="font-size: 12px;" border="0">
 		<tbody>
-			<tr>
-				<td style="width:150px;padding:6px; text-align:right;">
-								Тема письма: <font color='red'><span class='form-required starrequired'>*</span></font>
-
-				</td>
-				<td style="padding:6px;">
-						<%= select_tag("mailtype", options_for_select([['Письмо руководителю', '1'],
-                       													['Письмо менеджеру', '2'],
-                       													['Письмо в группу сервиса','3']], '3')) %>
-				</td>			
-			</tr>
 
 			<tr>
 				<td style="width:150px;padding:6px; text-align:right;">	Ф.И.О: <font color='red'><span class='form-required starrequired'>*</span></font>
 				</td>
-				<td style="padding:6px;">	<%= text_field_tag :fullname, '', :size => 60 %>
+				<td style="padding:6px;">	<%= f.text_field :fullname,  :size => 50 %>
 				</td>
 			</tr>
 
@@ -32,14 +34,14 @@
 			<tr>
 				<td style="width:150px;padding:6px; text-align:right;">	Телефон: <font color='red'><span class='form-required starrequired'>*</span></font>
 				</td>
-				<td style="padding:6px;"><%= text_field_tag :phone, '', :size => 60 %>
+				<td style="padding:6px;"><%= f.text_field :phone, :size => 50 %>
 				</td>
 			</tr>
 
 			<tr>
 				<td style="width:150px;padding:6px; text-align:right;">E-mail: <font color='red'><span class='form-required starrequired'>*</span></font>
 				</td>
-				<td style="padding:6px;"><%= text_field_tag :email,'', :size => 60 %>
+				<td style="padding:6px;"><%= f.text_field :email, :size => 50 %>
 				</td>
 			</tr>
 
@@ -47,7 +49,7 @@
 				<td style="width:150px;padding:6px; text-align:right;">
 								Сообщение: <font color='red'><span class='form-required starrequired'>*</span></font>
 							</td>
-				<td style="padding:6px;"><%= text_area_tag "message", "", :size=>"60x20" %>
+				<td style="padding:6px;"><%= f.text_area :message, :size=>"60x20" %>
 				</td>
 			</tr>
 		</tbody>
@@ -55,7 +57,7 @@
 			<tr>
 				<td></td>
 				<td style="padding: 6px">
-					<%= submit_tag 'Отправить' %>
+					<%= f.submit 'Отправить' %>
 					<p><font color='red'><span class='form-required starrequired'>*</span></font> - Поля, обязательные для заполнения</p>
 				</th>
 			</tr>
