@@ -1,0 +1,33 @@
+<h1>Listing postmails</h1>
+
+<table>
+  <tr>
+    <th>Recipiend</th>
+    <th>Subject</th>
+    <th>Fullname</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @postmails.each do |postmail| %>
+  <tr>
+    <td><%= postmail.recipiend %></td>
+    <td><%= postmail.subject %></td>
+    <td><%= postmail.fullname %></td>
+    <td><%= postmail.phone %></td>
+    <td><%= postmail.email %></td>
+    <td><%= postmail.message %></td>
+    <td><%= link_to 'Show', postmail %></td>
+    <td><%= link_to 'Edit', edit_postmail_path(postmail) %></td>
+    <td><%= link_to 'Destroy', postmail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Postmail', new_postmail_path %>
