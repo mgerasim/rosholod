@@ -22,17 +22,20 @@ class PagesController < ApplicationController
   def sendmail
   
 	@postmail = Postmail.new(params[:postmail])
+	@postmail.recipient = "mgerasim.mail@gmail.com";
+	@postmail.subject = "Тестовая тема";
 	respond_to do |format|
 	    if @postmail.save
+	    	@postmail.sendmail()
 #		format.html { redirect_to( :action => "postmail" )}
 		format.html { redirect_to main_path }
 	    else
 		format.html { render :action => "postmail" }
 	    end
 	end
-	@attr = {:recipient => "GerasimovMN@khv.dv.rt.ru", :subject => "Тестовая тема", :fullname => "Сидоров Иван Петрович", :phone => "4212322151", :email => "rosholod@rosholod.ru", :message => "Test message" }
-	m = Postmail.create!(@attr)
-	m.sendmail()
+#	@attr = {:recipient => "mgerasim.mail@gmail.com", :subject => "Тестовая тема", :fullname => "Сидоров Иван Петрович", :phone => "4212322151", :email => "rosholod@rosholod.ru", :message => "Test message" }
+#	m = Postmail.create!(@attr)
+#	m.sendmail()
 #	email = params[:email]
 #	recipient = "GerasimovMN@khv.dv.rt.ru"
 #	subject = params[:subject]
