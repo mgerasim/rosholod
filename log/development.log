@@ -24017,3 +24017,1537 @@ NameError (uninitialized constant PagesController::Postmail):
 Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
 Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
 Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipiend" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111216031351')
+Migrating to RenameRecipient (20111216051133)
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "postmails"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "postmails"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_postmails")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_postmails"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_postmails"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111216051133')[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-16 19:51:31 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1281ms (Views: 640.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:51:39 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started POST "/pages/sendmail" for 127.0.0.1 at 2011-12-16 19:51:48 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CJRIWjaeMIy1iT8k6l5N64QWraAgATkBDdqwrfatoHA=", "postmail"=>{"fullname"=>"gf", "phone"=>"dfh", "email"=>"fdh", "message"=>"fdh"}, "commit"=>"Отправить"}
+Rendered pages/postmail.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:51:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/sendmail" for 127.0.0.1 at 2011-12-16 19:52:01 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CJRIWjaeMIy1iT8k6l5N64QWraAgATkBDdqwrfatoHA=", "postmail"=>{"fullname"=>"gf", "phone"=>"dfh", "email"=>"fdh@dfg.dfh", "message"=>"fdh"}, "commit"=>"Отправить"}
+  [1m[36mSQL (156.2ms)[0m  [1mINSERT INTO "postmails" ("created_at", "email", "fullname", "message", "phone", "recipient", "subject", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 16 Dec 2011 08:52:02 UTC +00:00], ["email", "fdh@dfg.dfh"], ["fullname", "gf"], ["message", "fdh"], ["phone", "dfh"], ["recipient", "mgerasim.mail@gmail.com"], ["subject", "Тестовая тема"], ["updated_at", Fri, 16 Dec 2011 08:52:02 UTC +00:00]]
+
+Sent mail to mgerasim.mail@gmail.com (5703ms)
+Date: Fri, 16 Dec 2011 19:52:03 +1100
+From: rosholod@rosholod.ru
+To: mgerasim.mail@gmail.com
+Message-ID: <4eeb06b3a7d8c_d04142031464712@microsof-a3fc75.mail>
+Subject: =?UTF-8?Q?=D0=A2=D0=B5=D1=81=D1=82=D0=BE=D0=B2=D0=B0=D1=8F?=
+ =?UTF-8?Q?_=D1=82=D0=B5=D0=BC=D0=B0?=
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+CtCf0L7Qu9GD0YfQtdC90L4g0L/QuNGB0YzQvNC+INGBINGB0LDQudGC0LA6
+CtCa0L7QvdGC0LDQutGC0Ys6CiAgICBnZgogICAg0YLQtdC7LjogZGZoCiAg
+ICBlbWFpbDogZmRoQGRmZy5kZmgKCtCh0L7QvtCx0YnQtdC90LjQtToKICAg
+IGZkaAoKCQ==
+Redirected to http://localhost:3000/main
+Completed 302 Found in 7109ms
+
+
+Started GET "/main" for 127.0.0.1 at 2011-12-16 19:52:09 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:52:09 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-12-16 19:53:52 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:53:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 127.0.0.1 at 2011-12-16 19:53:55 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (828.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 891ms (Views: 890.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:53:56 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2011-12-16 19:53:59 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (187.5ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 203.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:53:59 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-16 19:54:04 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (234.4ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (46.9ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 344ms (Views: 312.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:54:04 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-16 19:54:04 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/store/eqpgroup_show/2" for 127.0.0.1 at 2011-12-16 19:54:06 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (187.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (46.9ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 281ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:54:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/13" for 127.0.0.1 at 2011-12-16 19:54:10 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (46.9ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 203.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/store/eqpgroup_show/13" for 127.0.0.1 at 2011-12-16 19:54:10 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (125.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (109.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 281ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:54:10 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2011-12-16 19:54:35 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:54:35 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 127.0.0.1 at 2011-12-16 19:54:37 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-16 19:54:37 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "users" ADD "hashed_password" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "users" ADD "salt" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111216223201')[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:11:42 +1100
+  Processing by LoginController#add_user as HTML
+ERROR: compiling _app_views_login_add_user_html_erb___672527809_23790624 RAISED D:/Developer/work/rosholod/app/views/login/add_user.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+D:/Developer/work/rosholod/app/views/login/add_user.html.erb:20: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_login_add_user_html_erb___672527809_23790624(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "login/add_user";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div>
+	');@output_buffer.append= ( error_message_for 'user' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	<fieldset>
+		<legend>Введите данные пользователя</legend>
+');		 form_for :user do |form| 
+@output_buffer.safe_concat('			<p>
+				<label for="user_name" >Имя:</label>
+				');@output_buffer.append= ( form.password_field :password, size => 40 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			</p>
+			<p>
+				<label for="user_password" >Пароль:</label>
+				');@output_buffer.append= ( form.password_field :password, :size => 40 );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('			</p>
+			');@output_buffer.append= ( submit_tag "Зарегистрировать пользователя", :class => "submit" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</fieldset>
+</div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:309:in `module_eval'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:309:in `compile'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:217:in `compile!'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:170:in `block in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:55:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/template.rb:169:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `block in instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/template_renderer.rb:9:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_view/renderer/renderer.rb:17:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:120:in `_render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:99:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rendering.rb:16:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/base.rb:167:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:416:in `_run__924215199__process_action__281864384__callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rescue.rb:17:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `block in instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/notifications.rb:53:in `instrument'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/base.rb:121:in `process'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/abstract_controller/rendering.rb:45:in `process'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal.rb:193:in `dispatch'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_controller/metal.rb:236:in `block in action'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:65:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:29:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/routing/route_set.rb:532:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/flash.rb:247:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/query_cache.rb:64:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activerecord-3.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/railties-3.1.2/lib/rails/rack/logger.rb:13:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/activesupport-3.1.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/static.rb:53:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/railties-3.1.2/lib/rails/engine.rb:456:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/railties-3.1.2/lib/rails/rack/log_tailer.rb:14:in `call'
+D:/Developer/work/rosholod/development/ruby/1.9.1/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+D:/RailsInstaller/Ruby1.9.2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered login/add_user.html.erb within layouts/application (328.1ms)
+Completed 500 Internal Server Error in 719ms
+
+ActionView::Template::Error (D:/Developer/work/rosholod/app/views/login/add_user.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+D:/Developer/work/rosholod/app/views/login/add_user.html.erb:20: syntax error, unexpected $end, expecting keyword_end):
+    15: 	</fieldset>
+    16: </div>
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (46.9ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (203.1ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:12:45 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (125.0ms)
+Completed 500 Internal Server Error in 141ms
+
+ActionView::Template::Error (undefined method `error_message_for' for #<#<Class:0x2c60928>:0x2c5db08>):
+    1: <div>
+    2: 	<%= error_message_for 'user' %>
+    3: 	<fieldset>
+    4: 		<legend>Введите данные пользователя</legend>
+    5: 		<% form_for :user do |form| %>
+  app/views/login/add_user.html.erb:2:in `_app_views_login_add_user_html_erb___672527809_23178540'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:15:08 +1100
+
+SyntaxError (D:/Developer/work/rosholod/app/controllers/login_controller.rb:5: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:5: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:5: syntax error, unexpected $end, expecting keyword_end
+		flash.now[:notice] = "������������ #{@user.name} ���������������"
+		                        ^):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:15:59 +1100
+
+SyntaxError (D:/Developer/work/rosholod/app/controllers/login_controller.rb:6: invalid multibyte char (UTF-8)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:6: invalid multibyte char (UTF-8)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:6: syntax error, unexpected $end, expecting keyword_end
+		flash.now[:notice] = "������������ #{@user.name} ���������������"
+		                        ^):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:16:12 +1100
+
+SyntaxError (D:/Developer/work/rosholod/app/controllers/login_controller.rb:7: invalid multibyte char (UTF-8)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:7: invalid multibyte char (UTF-8)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+		flash.now[:notice] = "������������ #{@user.name} ���������������"
+		                        ^):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:16:14 +1100
+
+SyntaxError (D:/Developer/work/rosholod/app/controllers/login_controller.rb:7: invalid multibyte char (UTF-8)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:7: invalid multibyte char (UTF-8)
+D:/Developer/work/rosholod/app/controllers/login_controller.rb:7: syntax error, unexpected $end, expecting keyword_end
+		flash.now[:notice] = "������������ #{@user.name} ���������������"
+		                        ^):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:17:17 +1100
+  Processing by LoginController#add_user as HTML
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: syntax error, unexpected $end, expecting ')'
+		errors.add_to_base("������ �� ������") if hashed_password.blank?
+		                      ^):
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:17:56 +1100
+  Processing by LoginController#add_user as HTML
+Completed 500 Internal Server Error in 16ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: syntax error, unexpected $end, expecting ')'
+		errors.add_to_base("������ �� ������") if hashed_password.blank?
+		                      ^):
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:17:59 +1100
+  Processing by LoginController#add_user as HTML
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: syntax error, unexpected $end, expecting ')'
+		errors.add_to_base("������ �� ������") if hashed_password.blank?
+		                      ^):
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (46.9ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:18:34 +1100
+  Processing by LoginController#add_user as HTML
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: syntax error, unexpected $end, expecting ')'
+		errors.add_to_base("������ �� ������") if hashed_password.blank?
+		                      ^):
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:18:36 +1100
+  Processing by LoginController#add_user as HTML
+Completed 500 Internal Server Error in 0ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: syntax error, unexpected $end, expecting ')'
+		errors.add_to_base("������ �� ������") if hashed_password.blank?
+		                      ^):
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:19:54 +1100
+  Processing by LoginController#add_user as HTML
+Completed 500 Internal Server Error in 47ms
+
+SyntaxError (D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: invalid multibyte char (US-ASCII)
+D:/Developer/work/rosholod/app/models/user.rb:12: syntax error, unexpected $end, expecting ')'
+		errors.add_to_base("Пароль не введен"...
+		                      ^):
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:20:14 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (281.2ms)
+Completed 500 Internal Server Error in 938ms
+
+ActionView::Template::Error (undefined local variable or method `size' for #<#<Class:0x2c5dc70>:0x2c33ef8>):
+    16: 		<% form_for :user do |form| %>
+    17: 			<p>
+    18: 				<label for="user_name" >Имя:</label>
+    19: 				<%= form.password_field :password, size => 40 %>
+    20: 			</p>
+    21: 			<p>
+    22: 				<label for="user_password" >Пароль:</label>
+  app/views/login/add_user.html.erb:19:in `block in _app_views_login_add_user_html_erb___672527809_23172924'
+  app/views/login/add_user.html.erb:16:in `_app_views_login_add_user_html_erb___672527809_23172924'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:20:49 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:20:49 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (93ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:21:04 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (46.9ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:21:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:21:09 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Completed 500 Internal Server Error in 219ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/models/user.rb:42:in `encrypted_password'
+  app/models/user.rb:23:in `password='
+  app/controllers/login_controller.rb:5:in `new'
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:24:55 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/models/user.rb:42:in `encrypted_password'
+  app/models/user.rb:23:in `password='
+  app/controllers/login_controller.rb:5:in `new'
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:26:16 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/models/user.rb:42:in `encrypted_password'
+  app/models/user.rb:23:in `password='
+  app/controllers/login_controller.rb:5:in `new'
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:27:02 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Completed 500 Internal Server Error in 62ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/models/user.rb:42:in `encrypted_password'
+  app/models/user.rb:23:in `password='
+  app/controllers/login_controller.rb:5:in `new'
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:27:33 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Completed 500 Internal Server Error in 109ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/models/user.rb:42:in `encrypted_password'
+  app/models/user.rb:23:in `password='
+  app/controllers/login_controller.rb:5:in `new'
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:27:37 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Completed 500 Internal Server Error in 141ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+  app/models/user.rb:42:in `encrypted_password'
+  app/models/user.rb:23:in `password='
+  app/controllers/login_controller.rb:5:in `new'
+  app/controllers/login_controller.rb:5:in `add_user'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:27:42 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:27:42 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:27:43 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:27:43 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:28:33 +1100
+
+SyntaxError (D:/Developer/work/rosholod/app/controllers/login_controller.rb:19: syntax error, unexpected keyword_end, expecting $end):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:28:44 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+    1: <div>
+    2: 	<% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this postmail from being saved:</h2>
+    5: 
+  app/views/login/add_user.html.erb:2:in `_app_views_login_add_user_html_erb___672527809_22681884'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:29:57 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+    1: <div>
+    2: <!--
+    3: 	<% if @user.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this postmail from being saved:</h2>
+    6: 
+  app/views/login/add_user.html.erb:3:in `_app_views_login_add_user_html_erb___672527809_23980368'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:29:58 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.errors):
+    1: <div>
+    2: <!--
+    3: 	<% if @user.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this postmail from being saved:</h2>
+    6: 
+  app/views/login/add_user.html.erb:3:in `_app_views_login_add_user_html_erb___672527809_23980368'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 10:30:10 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:30:10 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:30:12 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:30:12 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:30:13 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:30:13 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 10:30:23 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 10:30:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (78.1ms)[0m  [1mCREATE TABLE "eqpfamilies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "indx" integer) [0m
+  [1m[35m (109.4ms)[0m  CREATE TABLE "eqpgroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "pn" integer, "p1" varchar(255), "p2" varchar(255), "p3" varchar(255), "p4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpfamily_id" integer, "indx" integer, "description" varchar(255)) 
+  [1m[36m (125.0ms)[0m  [1mCREATE TABLE "eqps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "v1" varchar(255), "v2" varchar(255), "v3" varchar(255), "v4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqptype_id" integer, "indx" integer) [0m
+  [1m[35m (109.4ms)[0m  CREATE TABLE "eqptypes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpgroup_id" integer, "indx" integer, "img01_file_name" varchar(255), "img01_content_type" varchar(255), "img01_file_size" integer, "img01_updated_at" datetime) 
+  [1m[36m (156.2ms)[0m  [1mCREATE TABLE "postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (187.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "hashed_password" varchar(255), "salt" varchar(255)) 
+  [1m[36m (109.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (125.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111216223201')[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111203063813')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111203063938')[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111203064329')
+  [1m[36m (203.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111203064512')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111203095832')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204043553')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111204044712')
+  [1m[36m (93.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204072003')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111204073216')
+  [1m[36m (140.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204075453')[0m
+  [1m[35m (171.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111204094319')
+  [1m[36m (171.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204094356')[0m
+  [1m[35m (93.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111205040605')
+  [1m[36m (109.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111209030832')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111213045400')
+  [1m[36m (109.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111216031351')[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111216051133')
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111217043746')
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "hashed_password" varchar(255), "salt" varchar(255), "encrypted_password" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "users"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "salt" varchar(255), "encrypted_password" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111217044022')[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (93.8ms)[0m  [1mCREATE TABLE "eqpfamilies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "indx" integer) [0m
+  [1m[35m (140.6ms)[0m  CREATE TABLE "eqpgroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "pn" integer, "p1" varchar(255), "p2" varchar(255), "p3" varchar(255), "p4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpfamily_id" integer, "indx" integer, "description" varchar(255)) 
+  [1m[36m (140.6ms)[0m  [1mCREATE TABLE "eqps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "v1" varchar(255), "v2" varchar(255), "v3" varchar(255), "v4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqptype_id" integer, "indx" integer) [0m
+  [1m[35m (125.0ms)[0m  CREATE TABLE "eqptypes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpgroup_id" integer, "indx" integer, "img01_file_name" varchar(255), "img01_content_type" varchar(255), "img01_file_size" integer, "img01_updated_at" datetime) 
+  [1m[36m (125.0ms)[0m  [1mCREATE TABLE "postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (125.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "salt" varchar(255), "encrypted_password" varchar(255)) 
+  [1m[36m (125.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (109.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111217044022')[0m
+  [1m[35m (218.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111203063813')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111203063938')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111203064329')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111203064512')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111203095832')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204043553')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111204044712')
+  [1m[36m (109.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204072003')[0m
+  [1m[35m (171.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111204073216')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204075453')[0m
+  [1m[35m (109.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111204094319')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111204094356')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111205040605')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111209030832')[0m
+  [1m[35m (125.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111213045400')
+  [1m[36m (125.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111216031351')[0m
+  [1m[35m (140.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111216051133')
+  [1m[36m (109.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111216223201')[0m
+  [1m[35m (140.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111217043746')
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 15:53:27 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 1281ms (Views: 609.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 15:53:35 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (46ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 15:53:44 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 15:53:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 15:53:51 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 15:53:51 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 15:53:54 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 78ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 15:53:55 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 15:54:01 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 15:54:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:41:23 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (125.0ms)
+Rendered layouts/_stylesheets.html.erb (15.6ms)
+Completed 200 OK in 1250ms (Views: 671.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:41:31 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (15ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-17 17:41:48 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:41:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:41:55 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:41:56 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:42:14 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:42:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:42:16 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:42:17 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:42:19 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:42:19 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:42:22 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (93.8ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:42:23 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 17:43:05 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"name"=>"er", "email"=>"ewr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:43:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:44:55 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (515.6ms)
+Completed 500 Internal Server Error in 609ms
+
+ActionView::Template::Error (undefined method `error_message_for' for #<#<Class:0x2d62820>:0x2d390c0>):
+    1: <div>
+    2: 	<%= error_message_for 'user' %>
+    3: 	<fieldset>
+    4: 		<legend>Введите данные пользователя</legend>
+    5: 		<%= form_for :user do |form| %>
+  app/views/login/add_user.html.erb:2:in `_app_views_login_add_user_html_erb___581683159_23707980'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:45:19 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (140.6ms)
+Completed 500 Internal Server Error in 203ms
+
+ActionView::Template::Error (undefined method `error_messages_for' for #<#<Class:0x2c1a0c8>:0x2bea698>):
+    1: <div>
+    2: 	<%= error_messages_for 'user' %>
+    3: 	<fieldset>
+    4: 		<legend>Введите данные пользователя</legend>
+    5: 		<%= form_for :user do |form| %>
+  app/views/login/add_user.html.erb:2:in `_app_views_login_add_user_html_erb___581683159_23021484'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (46.9ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (62.5ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:47:30 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:47:30 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 17:47:41 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"name"=>"erty", "email"=>"ewrrty", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `salt`
+  [1m[36mSQL (156.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 17 Dec 2011 06:47:41 UTC +00:00], ["email", "ewrrty"], ["encrypted_password", "b64a4f6dcb72c7183f98d7c06a031e8952aa9d4fe671047ff0b34506cb20fe4c"], ["name", "erty"], ["salt", "fdd882bc8729ecd3299c3829382055b8f20b7a4ed3f12a16ed7da21b71df48ea"], ["updated_at", Sat, 17 Dec 2011 06:47:41 UTC +00:00]]
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 625ms (Views: 15.6ms | ActiveRecord: 156.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:47:41 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-12-17 17:48:02 +1100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:48:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 17:48:14 +1100
+  Processing by LoginController#add_user as HTML
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:48:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 17:48:31 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"name"=>"Mikahil", "email"=>"dddd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `salt`
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 17 Dec 2011 06:48:31 UTC +00:00], ["email", "dddd"], ["encrypted_password", "7bfc41334ee00b5c8faad8ac32718a7d26ddc3f690bef5c377467085499482f6"], ["name", "Mikahil"], ["salt", "9d293c9251d345a360c6e6b7c5faf841867d9895357779ae27bb4f93a49a9ab9"], ["updated_at", Sat, 17 Dec 2011 06:48:31 UTC +00:00]]
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:48:32 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-12-17 17:48:38 +1100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 17:48:38 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 20:07:11 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"name"=>"", "email"=>"ewrrty", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered login/add_user.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:07:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 20:07:23 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"name"=>"", "email"=>"ewrrty", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:07:23 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2011-12-17 20:18:05 +1100
+
+SyntaxError (D:/Developer/work/rosholod/app/controllers/login_controller.rb:32: syntax error, unexpected $end, expecting keyword_end):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2011-12-17 20:18:29 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:18:29 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:18:34 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"wr", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'wr' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 234ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:18:34 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:20:51 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"wr", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'wr' LIMIT 1
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:20:51 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:20:58 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"wr", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'wr' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:20:58 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:21:00 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"wr", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'wr' LIMIT 1
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:01 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:21:02 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"wr", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'wr' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:21:39 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"wr", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'wr' LIMIT 1
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:39 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2011-12-17 20:21:41 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:41 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2011-12-17 20:21:43 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/application (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2011-12-17 20:21:45 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:45 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:21:49 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"er", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'er' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:21:49 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/loginadd_user" for 127.0.0.1 at 2011-12-17 20:22:09 +1100
+
+ActionController::RoutingError (No route matches [GET] "/loginadd_user"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/login/add_user" for 127.0.0.1 at 2011-12-17 20:22:16 +1100
+  Processing by LoginController#add_user as HTML
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:22:16 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/add_user" for 127.0.0.1 at 2011-12-17 20:22:45 +1100
+  Processing by LoginController#add_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "user"=>{"name"=>"Mikahil", "email"=>"a@a.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `salt`
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 17 Dec 2011 09:22:45 UTC +00:00], ["email", "a@a.ru"], ["encrypted_password", "84870725b64a8b566b5509f80ec5333993faa64cc39dd15f6194bf6fa682344e"], ["name", "Mikahil"], ["salt", "ccdd1eea37856582aa5027e6e56a855b868be505b36719cc51b1abf6766a89ce"], ["updated_at", Sat, 17 Dec 2011 09:22:45 UTC +00:00]]
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered login/add_user.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 266ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:22:45 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/login/login" for 127.0.0.1 at 2011-12-17 20:22:55 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:22:55 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-17 20:23:08 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eEMwWH4OKkzjiD8joiTAVVevgeDt/XmP7xYXg3VU4Q=", "name"=>"a@a.ru", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'a@a.ru' LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 47ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-12-17 20:23:08 +1100
+  Processing by LoginController#index as HTML
+Rendered login/index.html.erb within layouts/application (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-17 20:23:08 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)

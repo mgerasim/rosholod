@@ -19,6 +19,10 @@ class Postmail < ActiveRecord::Base
 		      
     validates :message, :presence => true,
 			:length => { :maximum => 500}
+
+    before_save :sendmail
+
+private
 			
     def sendmail
 	mail = Postmailer.contact(self.recipient, self.subject, self.fullname, self.phone, self.email, self.message)

@@ -9,11 +9,15 @@
 <body>
     <div class="container">
 	<header>
-	</header>
+	</header
+
 	<section class="round">
-	    <h1><%= @title %></h1>
-	    <%= yield %>
-	</section>
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+      </section>
+
 	<footer>
 	</footer>
     </div>

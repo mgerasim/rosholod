@@ -1,6 +1,12 @@
 Rosholod::Application.routes.draw do
   
 
+  get "login/add_user"
+
+  get "login/login"
+
+  get "login/logout"
+
   get "store/index"
 
   get "pages/home"
