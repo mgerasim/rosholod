@@ -1,3 +1,41 @@
 <h1>Контакты</h1>
 <p>Контакты ЗАО "Росхолод" и схема проезда</p>
 
+<div id="YMapsID-352" style="width:600px;height:400px"></div> 
+
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<script src="http://api-maps.yandex.ru/1.1/?key=AAaQ7U4BAAAAqNWNcgIAshzb6g1Ycr1vncEHHvXEd1UQltYAAAAAAAAAAADHQcv-lgoDjDyDVZ_A8kBghej0BA==&modules=pmap&wizard=constructor" type="text/javascript"></script>
+<script type="text/javascript">
+    YMaps.jQuery(window).load(function () {
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-352")[0]);
+        map.setCenter(new YMaps.GeoPoint(135.057613,48.475045), 16);
+
+        // Создание метки
+
+var placemark = new YMaps.Placemark(new YMaps.GeoPoint(135.057766,48.474955), {draggable: 0,
+    hintOptions: {
+        maxWidth: 200,
+        showTimeout: 200,
+        offset: new YMaps.Point(5, 5)
+    },
+    balloonOptions: {
+        maxWidth: 140,
+        hasCloseButton: true,
+        mapAutoPan: 0
+    }
+});
+placemark.name = "ЗАО Росхолод-Хабаровск";
+placemark.description = "г.Хабаровск, \nул.Комсомольская, д.96";
+
+map.addOverlay(placemark);
+
+
+		// добавление зума
+//		map.addControl(new YMaps.Zoom()); 
+
+    });
+</script>
+
+<div id="YMapsID-352" style="width:450px;height:350px"></div>
+<div style="width:450px;text-align:right;font-family:Arial"><a href="http://api.yandex.ru/maps/tools/constructor/" style="color:#1A3DC1">Создано с помощью инструментов Яндекс.Карт</a></div>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->

@@ -12,14 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Имя:" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "Электронный адрес:" %><br />
     <%= f.text_field :email %>
   </div>
+  <div class="field">
+    <%= f.label :password, "Пароль:" %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Потверждение:" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Зарегистрировать пользователя"%>
   </div>
 <% end %>

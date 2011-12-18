@@ -23,10 +23,9 @@ class PagesController < ApplicationController
   
 	@postmail = Postmail.new(params[:postmail])
 	@postmail.recipient = "mgerasim.mail@gmail.com";
-	@postmail.subject = "Тестовая тема";
 	respond_to do |format|
 	    if @postmail.save
-	    	@postmail.sendmail()
+#	    	@postmail.sendmail()
 #		format.html { redirect_to( :action => "postmail" )}
 		format.html { redirect_to main_path }
 	    else

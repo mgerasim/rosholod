@@ -23,23 +23,17 @@
 		</header>
 	 	<hr>
 		<div id="subheader" class="span-24 last">
-		    <h3 class="alt">Админиcтрирование сайта ЗАО "Росхолод"</h3>
+		    <h3 class="alt">Вход в админиcтрирование сайта ЗАО "Росхолод"</h3>
 		</div>
-		<%= render 'layouts/adminmenu' %>
+		
 		<!– content –>
-		<div id="wrapper">
+		<div id="wrapper">			
+			<div id="content" class="span-24 last">			
 			
-			<div class="span-6 first" id="sidebar">
-				<ul>
-				    <%= render 'layouts/sidebaradmin' %>'
-				</ul>	
-			</div>
-			<div id="content" class="span-17 last">			
+			<% flash.each do |key, value| %>
+          		<div class="flash <%= key %>"><%= value %></div>
+        	<% end %>
 
-				<% flash.each do |key, value| %>
-          			<div class="flash <%= key %>"><%= value %></div>
-        		<% end %>
-        		
 			    <%= yield %>
 			</div>
 		</div>

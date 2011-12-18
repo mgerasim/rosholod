@@ -29,17 +29,12 @@
 		<!– content –>
 		<div id="wrapper">
 			
-			<div class="span-6 first" id="sidebar">
-				<ul>
-				    <%= render 'layouts/sidebaradmin' %>'
-				</ul>	
-			</div>
 			<div id="content" class="span-17 last">			
-
+				
 				<% flash.each do |key, value| %>
           			<div class="flash <%= key %>"><%= value %></div>
         		<% end %>
-        		
+
 			    <%= yield %>
 			</div>
 		</div>

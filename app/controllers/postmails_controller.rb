@@ -1,4 +1,7 @@
 class PostmailsController < ApplicationController
+
+  before_filter :authorize
+  
   # GET /postmails
   # GET /postmails.json
   def index
