@@ -24,7 +24,7 @@
 		<tbody>
 
 			<tr>
-				<td style="width:150px;padding:6px; text-align:right;">	Ф.И.О: <font color='red'><span class='form-required starrequired'>*</span></font>
+				<td style="width:150px;padding:6px; text-align:right;"><%= f.label :fullname, "Ф.И.О:" %> <font color='red'><span class='form-required starrequired'>*</span></font>
 				</td>
 				<td style="padding:6px;">	<%= f.text_field :fullname,  :size => 50 %>
 				</td>
@@ -39,9 +39,20 @@
 			</tr>
 
 			<tr>
-				<td style="width:150px;padding:6px; text-align:right;">E-mail: <font color='red'><span class='form-required starrequired'>*</span></font>
+				<td style="width:150px;padding:6px; text-align:right;"><%= f.label :email, "Электронный адрес" %> <font color='red'><span class='form-required starrequired'>*</span></font>
 				</td>
 				<td style="padding:6px;"><%= f.text_field :email, :size => 50 %>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td style="width:150px;padding:6px; text-align:right;">Тема сообщения: <font color='red'><span class='form-required starrequired'>*</span></font>
+				</td>
+				<td style="padding:6px;">
+					<%= f.select :subject,
+								Postmail::SUBJECT_TYPES,
+								:prompt => "Выберите тему сообщения" %>
 				</td>
 			</tr>
 

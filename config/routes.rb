@@ -1,12 +1,19 @@
 Rosholod::Application.routes.draw do
   
 
+  get "login/add_user"
+
+  get "login/login"
+
+  get "login/logout"
+
   get "store/index"
 
   get "pages/home"
 
-  resources :users
-  
+  get "admin/index"
+
+  resources :users    
   
   match '/main',	:to => 'pages#main'
   match '/',		:to => 'pages#main'
@@ -14,11 +21,16 @@ Rosholod::Application.routes.draw do
   match '/service',	:to => 'store#index'
   match '/catalog',	:to => 'store#index'
   match '/postmail',	:to => 'pages#postmail'
+  match '/signup',	:to => 'users#new'
+  match '/admin',	:to => 'admin#index'
+  match '/users',	:to => 'users#index'
+  match '/logout',	:to => 'login#logout'
+  match '/login',	:to => 'login#login'
   
   root :to => 'pages#main'
 
   resources :postmails
-  
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

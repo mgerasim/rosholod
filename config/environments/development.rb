@@ -30,24 +30,21 @@ Rosholod::Application.configure do
 
 config.action_mailer.delivery_method = :smtp
   
-  ActionMailer::Base.smtp_settings = {
-    :address  => "172.30.1.200",
-    :port  => 25,
-#    :user_name            => 'GerasimovMN@khv.dv.rt.ru',
-#    :password             => 'gerasimovmn123',  
-#    :authentication       => "plain",  
-    :enable_starttls_auto => false   
- }
+#  ActionMailer::Base.smtp_settings = {
+ #   :address  => "172.30.1.200",
+  #  :port  => 25,
+   # :enable_starttls_auto => false   
+ #}
   
-#  ActionMailer::Base.smtp_settings = {  
-#	:address              => "smtp.gmail.com",
-#	:port                 => 587,
-##	:domain               => "asciicasts.com",
-#	:user_name            => "mgerasim.mail@gmail.com",
-#	:password             => "AmurKabel43",
-#	:authentication       => "plain",
-#	:enable_starttls_auto => true
-#  } 
+  ActionMailer::Base.smtp_settings = {  
+	:address              => "smtp.gmail.com",
+	:port                 => 587,
+#	:domain               => "asciicasts.com",
+	:user_name            => "mgerasim.mail@gmail.com",
+	:password             => "AmurKabel43",
+	:authentication       => "plain",
+	:enable_starttls_auto => true
+  } 
 
   config.action_mailer.raise_delivery_errors = true
   
