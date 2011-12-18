@@ -46,7 +46,12 @@ group :development, :test do
 end
 
 group :production, :staging do
+<<<<<<< HEAD
   gem 'therubyracer'
+=======
+#  gem 'therubyracer'
+#  gem 'therubyracer-heroku', '0.8.1.pre3'
+>>>>>>> 023b9d513387469f97c006698aff91228ef25e16
   gem 'pg'
 end
 
