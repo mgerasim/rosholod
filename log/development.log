@@ -32199,3 +32199,51 @@ Completed 200 OK in 219ms (Views: 218.8ms | ActiveRecord: 0.0ms)
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-18 19:39:08 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
 >>>>>>> d441f44da5dfa42c9c00ede639276b7dc562569d
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "hashed_password" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "salt" varchar(255)
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111216223201')[0m
+Migrating to AddPasswordToUsers (20111217043746)
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "encrypted_password" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111217043746')[0m
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+  [1m[35m (10.8ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "hashed_password" varchar(255), "salt" varchar(255), "encrypted_password" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","email","created_at","updated_at","hashed_password","salt","encrypted_password") VALUES (1, 'привет', '', '2011-12-06 00:56:10.822816', '2011-12-06 00:56:10.822816', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_users" ("id","name","email","created_at","updated_at","hashed_password","salt","encrypted_password") VALUES (2, 'w', 'w', '2011-12-06 04:54:51.010816', '2011-12-06 04:54:51.010816', NULL, NULL, NULL)
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "salt" varchar(255), "encrypted_password" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("id","name","email","created_at","updated_at","salt","encrypted_password") VALUES (1, 'привет', '', '2011-12-06 00:56:10.822816', '2011-12-06 00:56:10.822816', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("id","name","email","created_at","updated_at","salt","encrypted_password") VALUES (2, 'w', 'w', '2011-12-06 04:54:51.010816', '2011-12-06 04:54:51.010816', NULL, NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111217044022')
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqpfamilies")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqpgroups")
+  [1m[36m (0.2ms)[0m  [1mPRAGMA index_list("eqps")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqptypes")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("postmails")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
