@@ -1,7 +1,7 @@
 #coding: utf-8
 module ApplicationHelper
     def title
-	base_title = "ЗАО Росхолод"
+	base_title = "ЗАО \"Росхолод-Хабаровск\""
 	if @title.nil?
 	    base_title
 	else

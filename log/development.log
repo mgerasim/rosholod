@@ -32247,3 +32247,2331 @@ Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
   [1m[35m (0.1ms)[0m  PRAGMA index_list("eqptypes")
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("postmails")[0m
   [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/admin" for 172.30.4.156 at 2011-12-19 08:17:07 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://172.30.4.214:3002/login
+Completed 302 Found in 522ms
+
+
+Started GET "/login" for 172.30.4.156 at 2011-12-19 08:17:11 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (26.5ms)
+Rendered layouts/_stylesheets.html.erb (0.5ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 252ms (Views: 250.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:17:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 200 OK (54ms)
+
+
+Started POST "/login/login" for 172.30.4.156 at 2011-12-19 08:19:31 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mNKPqpGsgq8x2FAA3IPiwop1NRrt2Fdz1D8/FbEO9XI=", "name"=>"mgerasim@inbox.ru", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'mgerasim@inbox.ru' LIMIT 1
+Redirected to http://172.30.4.214:3002/admin/index
+Completed 302 Found in 112ms
+
+
+Started GET "/admin/index" for 172.30.4.156 at 2011-12-19 08:19:31 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (22.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (4.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.7ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (1.1ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (742.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1074ms (Views: 820.4ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:21:19 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (5.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:21:30 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:21:30 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:21:34 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (196.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 254ms (Views: 252.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:21:35 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:21:44 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:21:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:21:56 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:21:56 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:22:26 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 165ms (Views: 164.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:22:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:23:06 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:23:06 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:23:08 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:23:08 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:23:38 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:23:38 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:23:50 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:23:50 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:24:12 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:24:12 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:24:44 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:24:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:25:05 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:25:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:25:44 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_navmenu.html.erb (8.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:25:45 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:26:23 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:26:23 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 200 OK (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:28:57 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:28:57 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:47:05 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.2ms)
+Rendered layouts/_navmenu.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 163ms (Views: 156.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:47:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 08:47:14 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 08:47:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 172.30.4.156 at 2011-12-19 09:04:55 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://172.30.4.214:3002/login
+Completed 302 Found in 188ms
+
+
+Started GET "/login" for 172.30.4.156 at 2011-12-19 09:04:55 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (4.4ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:04:55 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:05:25 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:05:25 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:26:04 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (1.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:26:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:26:25 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (1.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:26:25 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:27:36 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:27:36 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:27:49 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (2.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:27:49 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:28:12 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.5ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:28:12 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:28:40 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 165ms (Views: 163.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:28:40 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 09:29:07 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:29:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 09:29:19 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (71.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 307ms (Views: 240.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:29:19 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:31:00 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:31:00 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 09:31:02 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (59.3ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (12.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 266ms (Views: 93.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:31:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:31:08 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:31:08 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 09:31:10 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (2.7ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (3.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (4.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (337.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 377ms (Views: 364.6ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:31:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 09:31:23 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.2ms)
+  [1m[36mEqpfamily Load (0.2ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.2ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (202.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 247ms (Views: 234.3ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:31:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:32:06 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (4.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:32:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 09:32:08 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (337.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 371ms (Views: 355.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:32:09 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 09:32:10 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:32:10 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 09:32:14 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (137.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 167ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:32:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 09:32:26 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (56.4ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 83.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:32:27 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 09:32:29 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.8ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (211.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 374ms (Views: 366.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:32:29 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:54:26 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:54:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:55:49 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:55:49 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 09:55:51 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.3ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (384.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 427ms (Views: 417.9ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:55:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (4ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 09:55:53 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (137.1ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (1.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (249.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 428ms (Views: 418.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:55:53 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:55:55 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (1.2ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (8.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:55:56 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:56:07 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:56:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 09:56:11 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (1.4ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.7ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (383.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 423ms (Views: 413.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:56:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:56:12 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (2.3ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:56:12 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:56:43 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:56:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:57:58 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:57:58 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:58:00 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:58:00 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 09:58:03 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.9ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (241.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 282ms (Views: 272.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:58:04 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:58:10 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (1.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:58:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 09:58:27 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.6ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 09:58:27 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:30:37 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (15.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 175ms (Views: 174.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:30:38 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:30:44 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:30:44 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:35:17 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:35:18 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:44:18 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:44:18 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 10:44:24 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (5.8ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (347.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 382ms (Views: 375.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:44:25 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:44:29 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (14.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:44:29 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:44:54 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (13.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:44:54 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:45:47 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:45:47 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (10ms)
+
+
+Started GET "/images/rosholod_main.jpg" for 172.30.4.156 at 2011-12-19 10:45:47 +1100
+
+ActionController::RoutingError (No route matches [GET] "/images/rosholod_main.jpg"):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:46:13 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (16.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:46:13 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:47:29 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:47:29 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:48:01 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (2.2ms)
+Rendered layouts/_navmenu.html.erb (7.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:48:01 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (6ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:48:20 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.8ms)
+Rendered layouts/_navmenu.html.erb (7.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:48:20 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:49:25 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:49:25 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (6ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:50:27 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:50:27 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:50:37 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (11.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:50:37 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:50:45 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (10.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:50:46 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:50:51 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (12.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:50:51 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:51:19 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:51:19 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:51:23 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:51:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:51:40 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:51:40 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:51:45 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:51:46 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 10:51:47 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (1.3ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.1ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (1.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (363.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 404ms (Views: 391.3ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:51:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (3ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:51:52 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:51:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:52:26 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (10.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 174ms (Views: 171.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:52:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:54:31 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:54:31 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/body-bot.jpg" for 172.30.4.156 at 2011-12-19 10:54:31 +1100
+Served asset /images/body-bot.jpg - 404 Not Found (10ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/body-bot.jpg"):
+  
+
+Rendered help/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:54:40 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:54:40 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:55:15 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:55:15 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:55:46 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:55:46 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:56:01 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (1.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (128.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 164ms (Views: 161.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:56:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:56:10 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:56:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:57:13 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:57:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:58:09 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (3.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:58:09 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:58:40 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.2ms)
+Rendered layouts/_navmenu.html.erb (7.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:58:40 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 10:59:59 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (13.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 10:59:59 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:00:05 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:00:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:01:41 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:01:41 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:01:52 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.1ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (1.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (246.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 289ms (Views: 277.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:01:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:01:56 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:01:56 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:01:58 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.9ms)
+  [1m[36mEqpfamily Load (2.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (393.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 436ms (Views: 427.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:01:58 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:02:01 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (208.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 305ms (Views: 243.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:02:01 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:02:10 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:02:10 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:02:24 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:02:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (5ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:08:29 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:08:29 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:08:52 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:08:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:09:34 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (141.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 175ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:09:34 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:09:48 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:09:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:10:17 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (246.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (5.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 360ms (Views: 285.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:10:17 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 11:10:26 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:10:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:10:39 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.2ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (1.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (378.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 416ms (Views: 407.4ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:10:40 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:10:46 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (180.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 238ms (Views: 226.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:10:47 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 11:12:15 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:12:15 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 11:23:32 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (9.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:23:33 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 11:24:39 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.1ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:24:39 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 11:25:14 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:25:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 11:25:33 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:25:33 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:25:38 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (62.3ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 158ms (Views: 97.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:25:39 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:25:47 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (65.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 160ms (Views: 99.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:25:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:25:53 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (70.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 291ms (Views: 234.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:25:53 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:26:01 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (66.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 156ms (Views: 100.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:26:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:27:26 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (66.4ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 170ms (Views: 106.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:27:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:27:32 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.4ms)
+Rendered layouts/_navmenu.html.erb (10.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 176ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:27:33 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:27:36 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.5ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (378.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 419ms (Views: 404.0ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:27:37 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:27:39 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:27:39 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:36:07 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (10.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (23.6ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:36:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:37:57 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (6.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (18.4ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:37:57 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:38:00 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (18.7ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:00 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:38:02 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_navmenu.html.erb (10.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (21.3ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:38:04 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (20.2ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:04 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:38:05 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (16.8ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:38:07 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (19.6ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:38:09 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.4ms)
+Rendered layouts/_footer.html.erb (1.2ms)
+Rendered layouts/_rosholod.html.erb (18.9ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:09 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 11:38:11 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (7.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (18.3ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:38:22 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_navmenu.html.erb (8.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (18.8ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:38:23 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:42:17 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered layouts/_navmenu.html.erb (8.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (26.6ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:42:17 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:47:06 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (3.9ms)
+Rendered layouts/_navmenu.html.erb (8.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (24.0ms)
+Completed 200 OK in 51ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:06 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:47:08 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (2.5ms)
+Rendered layouts/_navmenu.html.erb (8.3ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (1.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.9ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (390.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (419.7ms)
+Completed 200 OK in 444ms (Views: 429.9ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:08 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:47:11 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (6.1ms)
+Rendered layouts/_navmenu.html.erb (8.5ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (359.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (379.8ms)
+Completed 200 OK in 399ms (Views: 386.9ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:11 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:47:13 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (9.2ms)
+Rendered layouts/_navmenu.html.erb (6.4ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (360.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (386.8ms)
+Completed 200 OK in 402ms (Views: 397.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:47:15 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_navmenu.html.erb (16.7ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (220.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (247.7ms)
+Completed 200 OK in 407ms (Views: 402.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:16 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (8ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 11:47:17 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.5ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (9.3ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:17 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:47:27 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (61.4ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered layouts/_navmenu.html.erb (134.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (149.5ms)
+Completed 200 OK in 278ms (Views: 219.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:27 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/pages/sendmail" for 172.30.4.156 at 2011-12-19 11:47:32 +1100
+  Processing by PagesController#sendmail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "postmail"=>{"fullname"=>"", "phone"=>"", "email"=>"", "subject"=>"", "message"=>""}, "commit"=>"Отправить"}
+Rendered pages/postmail.html.erb within layouts/pages (28.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (13.3ms)
+Completed 200 OK in 164ms (Views: 54.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:32 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:47:45 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (3.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (19.9ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:46 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:47:47 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (8.6ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (355.3ms)
+Rendered layouts/_footer.html.erb (1.3ms)
+Rendered layouts/_rosholodstore.html.erb (376.9ms)
+Completed 200 OK in 395ms (Views: 390.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:48 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:47:51 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (2.6ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+  [1m[36mEqpfamily Load (10.5ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (339.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (358.3ms)
+Completed 200 OK in 376ms (Views: 359.0ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:47:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:48:23 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (9.9ms)
+Rendered layouts/_navmenu.html.erb (8.1ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (6.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (5.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (361.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (386.0ms)
+Completed 200 OK in 405ms (Views: 389.7ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:48:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 11:48:26 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (12.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (21.8ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:48:27 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:48:44 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (18.5ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:48:45 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:50:12 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (6.2ms)
+Rendered layouts/_navmenu.html.erb (5.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (15.6ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:50:12 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:50:14 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (2.4ms)
+Rendered layouts/_navmenu.html.erb (8.0ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (337.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (360.8ms)
+Completed 200 OK in 381ms (Views: 372.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:50:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:50:15 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (357.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (380.7ms)
+Completed 200 OK in 399ms (Views: 393.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:50:16 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:50:18 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (5.8ms)
+Rendered layouts/_navmenu.html.erb (7.7ms)
+  [1m[36mEqpfamily Load (10.9ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (353.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (375.6ms)
+Completed 200 OK in 399ms (Views: 383.6ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:50:18 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:56:44 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (2.1ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (360.8ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered layouts/_rosholodstore.html.erb (389.3ms)
+Completed 200 OK in 404ms (Views: 399.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:56:45 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:57:01 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (11.6ms)
+Rendered layouts/_navmenu.html.erb (3.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (24.6ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:02 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:57:04 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (7.7ms)
+Rendered layouts/_navmenu.html.erb (10.0ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (7.2ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (359.4ms)
+Rendered layouts/_footer.html.erb (7.5ms)
+Rendered layouts/_rosholodstore.html.erb (389.9ms)
+Completed 200 OK in 407ms (Views: 392.7ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:05 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:57:07 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (1.2ms)
+Rendered layouts/_header.html.erb (2.3ms)
+Rendered layouts/_navmenu.html.erb (6.5ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.7ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (10.8ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (359.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (388.1ms)
+Completed 200 OK in 399ms (Views: 383.9ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 11:57:08 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (15.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (20.9ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:08 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/postmail" for 172.30.4.156 at 2011-12-19 11:57:15 +1100
+  Processing by PagesController#postmail as HTML
+Rendered pages/postmail.html.erb within layouts/pages (57.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered layouts/_navmenu.html.erb (3.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (8.7ms)
+Completed 200 OK in 148ms (Views: 100.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:15 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/main" for 172.30.4.156 at 2011-12-19 11:57:18 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (142.7ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (155.0ms)
+Completed 200 OK in 175ms (Views: 173.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:19 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 11:57:28 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (3.3ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (358.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (377.1ms)
+Completed 200 OK in 400ms (Views: 380.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:28 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/service" for 172.30.4.156 at 2011-12-19 11:57:30 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_navmenu.html.erb (11.3ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (355.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (379.3ms)
+Completed 200 OK in 400ms (Views: 385.1ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:30 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/contact" for 172.30.4.156 at 2011-12-19 11:57:33 +1100
+  Processing by PagesController#contact as HTML
+Rendered pages/contact.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (3.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (19.2ms)
+Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:33 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)

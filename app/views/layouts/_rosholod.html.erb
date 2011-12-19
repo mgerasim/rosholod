@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title><%= title %></title>
+  <%= csrf_meta_tag %>
+  <%= render 'layouts/stylesheets' %>
+                                                                                      
+</head>
+<body>
+    
+    <div class="otstup">
+    </div>
+    
+    <div id="main">
+		<div id="main_content">
+		
+    <div class="container" id="content">
+		
+		<%= render 'layouts/header' %>
+		
+		<hr>
+		<div id="subheader" class="span-24 last">
+		    <h3 class="alt">Полный комплекс услуг обслуживания холодильного оборудования для магазинов и складов продуктов питания</h3>
+		</div>
+		<%= render 'layouts/navmenu' %>
+		<div id="wrapper">
+			<div id="content" class="span-17 last">			
+			    <%= yield %>
+			</div>
+		</div>
+		<%= render 'layouts/footer' %>
+    </div>
+    </div>
+    </div>
+    
+    <div class="otstup">
+    </div>
+</body>
+</html>
+
