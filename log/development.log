@@ -34881,3 +34881,606 @@ Migrating to Add_columnDescriptionToEqpgroup (20111219012302)
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
   [1m[35m (0.1ms)[0m  PRAGMA index_list("postmails")
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/admin/eqpgroup_edit/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 12:34:16 +1100
+  Processing by AdminController#eqpgroup_edit as HTML
+  Parameters: {"eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+Rendered admin/eqpgroup_edit.html.erb within layouts/admin (98.3ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (7.0ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (5.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (6.2ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (341.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 734ms (Views: 447.0ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:17 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/eqpgroup_update/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 12:34:25 +1100
+  Processing by AdminController#eqpgroup_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "eqpgroup"=>{"name"=>"Samsung", "p1"=>"Gabarite", "p2"=>"", "p3"=>"", "p4"=>"", "description"=>"Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\nХолодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\nХолодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\nХолодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\n"}, "commit"=>"Изменить", "eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (0.5ms)[0m  UPDATE "eqpgroups" SET "description" = 'Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности. Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.
+Камеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.
+Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности. Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.
+Камеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.
+Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности. Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.
+Камеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.
+Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности. Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.
+Камеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.
+', "updated_at" = '2011-12-19 01:34:25.676487' WHERE "eqpgroups"."id" = 9
+Redirected to http://172.30.4.214:3002/admin/eqpfamily_show/5
+Completed 302 Found in 480ms
+
+
+Started GET "/admin/eqpfamily_show/5" for 172.30.4.156 at 2011-12-19 12:34:26 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (19.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (2.1ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (10.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (328.6ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 748ms (Views: 369.7ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:26 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/logout" for 172.30.4.156 at 2011-12-19 12:34:30 +1100
+  Processing by LoginController#logout as HTML
+Redirected to http://172.30.4.214:3002/login
+Completed 302 Found in 4ms
+
+
+Started GET "/login" for 172.30.4.156 at 2011-12-19 12:34:30 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (4.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:30 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 12:34:34 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.9ms)
+Rendered layouts/_header.html.erb (2.9ms)
+Rendered layouts/_navmenu.html.erb (9.2ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (20.7ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:34 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 12:34:37 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (381.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (406.8ms)
+Completed 200 OK in 428ms (Views: 416.8ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:38 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 172.30.4.156 at 2011-12-19 12:34:39 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mEqptype Load (0.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (374.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (2.4ms)
+Rendered layouts/_navmenu.html.erb (11.1ms)
+  [1m[36mEqpfamily Load (3.6ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.7ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (109.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (137.5ms)
+Completed 200 OK in 611ms (Views: 541.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:40 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/9" for 172.30.4.156 at 2011-12-19 12:34:43 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mEqptype Load (2.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (215.9ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (3.7ms)
+Rendered layouts/_navmenu.html.erb (7.9ms)
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.7ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (256.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (280.8ms)
+Completed 200 OK in 716ms (Views: 507.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:34:43 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+Migrating to RemoveColumnDescriptionFromEqpgroup (20111219012059)
+Migrating to Add_columnDescriptionToEqpgroup (20111219012302)
+Migrating to AddAttachmentImg01ToEqpgroup (20111219042852)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "eqpgroups" ADD "img01_file_name" varchar(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "eqpgroups" ADD "img01_content_type" varchar(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "eqpgroups" ADD "img01_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "eqpgroups" ADD "img01_updated_at" datetime
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111219042852')[0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/admin" for 172.30.4.156 at 2011-12-19 15:35:37 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://172.30.4.214:3002/login
+Completed 302 Found in 46ms
+
+
+Started GET "/login" for 172.30.4.156 at 2011-12-19 15:35:37 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (6.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:35:37 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 172.30.4.156 at 2011-12-19 15:35:40 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "name"=>"mgerasim@inbox.ru", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'mgerasim@inbox.ru' LIMIT 1
+Redirected to http://172.30.4.214:3002/admin/index
+Completed 302 Found in 224ms
+
+
+Started GET "/admin/index" for 172.30.4.156 at 2011-12-19 15:35:40 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (168.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (9.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (467.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 793ms (Views: 662.1ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:35:41 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpfamily_edit/5" for 172.30.4.156 at 2011-12-19 15:35:46 +1100
+  Processing by AdminController#eqpfamily_edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+Rendered admin/eqpfamily_edit.html.erb within layouts/admin (40.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (2.1ms)
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (1.1ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (479.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 757ms (Views: 530.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:35:47 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (2ms)
+
+
+Started PUT "/admin/eqpfamily_update/5" for 172.30.4.156 at 2011-12-19 15:35:48 +1100
+  Processing by AdminController#eqpfamily_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "eqpfamily"=>{"name"=>"Холодильное обрудование"}, "commit"=>"Изменить", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+Redirected to http://172.30.4.214:3002/admin/index
+Completed 302 Found in 262ms
+
+
+Started GET "/admin/index" for 172.30.4.156 at 2011-12-19 15:35:48 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (156.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (7.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (483.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 791ms (Views: 660.5ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:35:49 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpfamily_show/5" for 172.30.4.156 at 2011-12-19 15:35:51 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (9.6ms)
+Rendered layouts/_stylesheets.html.erb (0.3ms)
+Rendered layouts/_adminmenu.html.erb (1.8ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (334.7ms)
+Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 782ms (Views: 379.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:35:52 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (6ms)
+
+
+Started GET "/admin/eqpgroup_edit/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 15:35:53 +1100
+  Processing by AdminController#eqpgroup_edit as HTML
+  Parameters: {"eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+Rendered admin/eqpgroup_edit.html.erb within layouts/admin (110.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (7.6ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (6.8ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (10.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (323.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 742ms (Views: 446.4ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:35:54 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/eqpgroup_update/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 15:36:04 +1100
+  Processing by AdminController#eqpgroup_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "eqpgroup"=>{"name"=>"Samsung", "p1"=>"Gabarite", "p2"=>"", "p3"=>"", "p4"=>"", "img01"=>#<ActionDispatch::Http::UploadedFile:0x000000037b4de8 @original_filename="SV-Gruppe-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"eqpgroup[img01]\"; filename=\"SV-Gruppe-1.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111219-3113-183jgw0>>, "description"=>"Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\nХолодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\nХолодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\nХолодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\n"}, "commit"=>"Изменить", "eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "9"]]
+[32mCommand[0m :: identify -format %wx%h '/tmp/stream20111219-3113-1cppg3q.jpg[0]'
+[32mCommand[0m :: convert '/tmp/stream20111219-3113-1cppg3q.jpg[0]' -resize "150x150" '/tmp/stream20111219-3113-1cppg3q20111219-3113-1ktqcw2'
+  [1m[35m (0.5ms)[0m  UPDATE "eqpgroups" SET "img01_file_name" = 'SV-Gruppe-1.jpg', "img01_content_type" = 'image/jpeg', "img01_file_size" = 14662, "img01_updated_at" = '2011-12-19 04:36:04.888409', "updated_at" = '2011-12-19 04:36:05.365743' WHERE "eqpgroups"."id" = 9
+[paperclip] Saving attachments.
+[paperclip] saving /eqpgroups/original/SV-Gruppe-1.jpg
+[paperclip] saving /eqpgroups/small/SV-Gruppe-1.jpg
+[32mCommand[0m :: file -b --mime '/tmp/stream20111219-3113-1cppg3q20111219-3113-1ktqcw2'
+Redirected to http://172.30.4.214:3002/admin/eqpfamily_show/5
+Completed 302 Found in 3892ms
+
+
+Started GET "/admin/eqpfamily_show/5" for 172.30.4.156 at 2011-12-19 15:36:08 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (23.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (2.6ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.7ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (341.8ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 778ms (Views: 386.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:36:09 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 172.30.4.156 at 2011-12-19 15:36:28 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.4ms)
+Rendered layouts/_navmenu.html.erb (13.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholod.html.erb (19.0ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:36:28 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/catalog" for 172.30.4.156 at 2011-12-19 15:36:31 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (14.0ms)
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (365.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (397.3ms)
+Completed 200 OK in 411ms (Views: 405.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:36:31 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/9" for 172.30.4.156 at 2011-12-19 15:36:33 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "9"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (331.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.2ms)
+Rendered layouts/_navmenu.html.erb (14.3ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (85.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (115.9ms)
+Completed 200 OK in 529ms (Views: 462.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:36:33 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (4ms)
+
+
+Started GET "/store/eqpgroup_show/9" for 172.30.4.156 at 2011-12-19 15:39:07 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"9"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (1.2ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (343.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (1.3ms)
+Rendered layouts/_navmenu.html.erb (3.7ms)
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (91.0ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (116.9ms)
+Completed 200 OK in 543ms (Views: 475.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:39:07 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/9" for 172.30.4.156 at 2011-12-19 15:39:27 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"9"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "9"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (325.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (11.5ms)
+Rendered layouts/_navmenu.html.erb (3.8ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (93.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (114.4ms)
+Completed 200 OK in 532ms (Views: 454.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:39:28 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/store/eqpgroup_show/9" for 172.30.4.156 at 2011-12-19 15:39:34 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"9"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (204.0ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_header.html.erb (5.4ms)
+Rendered layouts/_navmenu.html.erb (3.2ms)
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.3ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (224.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Rendered layouts/_rosholodstore.html.erb (246.3ms)
+Completed 200 OK in 669ms (Views: 462.2ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:39:35 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
