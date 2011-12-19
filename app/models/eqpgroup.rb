@@ -7,7 +7,7 @@ class Eqpgroup < ActiveRecord::Base
 			  :s3_credentials => Rails.root.join('config/s3.yml'),
 	                  :s3_permissions => :public_read,
 	                  :url  => 's3-website-ap-northeast-1.amazonaws.com',
-	                  :path => '/eqpgroups/:style/:basename.:extension',
+	                  :path => '/eqpgroups/:id/:style/:basename.:extension',
                    	  :s3_protocol => 'https' 
                                                	                                    
         validates_attachment_content_type :img01, :content_type => ['image/jpeg', 'image/png']
