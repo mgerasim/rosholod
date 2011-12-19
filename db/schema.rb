@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111217044022) do
+ActiveRecord::Schema.define(:version => 20111219012302) do
 
   create_table "eqpfamilies", :force => true do |t|
     t.string   "name"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20111217044022) do
     t.datetime "updated_at"
     t.integer  "eqpfamily_id"
     t.integer  "indx"
-    t.string   "description"
+    t.text     "description"
   end
 
   create_table "eqps", :force => true do |t|

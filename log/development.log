@@ -34575,3 +34575,309 @@ Completed 200 OK in 40ms (Views: 32.3ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 11:57:33 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 172.30.4.156 at 2011-12-19 12:10:13 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://172.30.4.214:3002/login
+Completed 302 Found in 59ms
+
+
+Started GET "/login" for 172.30.4.156 at 2011-12-19 12:10:13 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (5.5ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:14 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started POST "/login/login" for 172.30.4.156 at 2011-12-19 12:10:16 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "name"=>"mgerasim@inbox.ru", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'mgerasim@inbox.ru' LIMIT 1
+Redirected to http://172.30.4.214:3002/admin/index
+Completed 302 Found in 237ms
+
+
+Started GET "/admin/index" for 172.30.4.156 at 2011-12-19 12:10:17 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (1.5ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (165.2ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (4.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (1.5ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (1.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (1.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (496.9ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 835ms (Views: 683.3ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:18 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/admin/eqpfamily_edit/5" for 172.30.4.156 at 2011-12-19 12:10:23 +1100
+  Processing by AdminController#eqpfamily_edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (1.5ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+Rendered admin/eqpfamily_edit.html.erb within layouts/admin (33.8ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (5.3ms)
+  [1m[36mEqpfamily Load (1.5ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (2.2ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (1.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (7.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.7ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (1.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (628.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 797ms (Views: 678.1ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:24 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpgroup_show/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 12:10:29 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mEqpfamily Load (0.3ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 5 LIMIT 1[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+[paperclip] Saving attachments.
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (182.7ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (5.8ms)
+  [1m[36mEqpfamily Load (0.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (1.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.5ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (96.3ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 858ms (Views: 316.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:30 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpfamily_show/5" for 172.30.4.156 at 2011-12-19 12:10:36 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.3ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (19.6ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (4.7ms)
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (8.7ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (1.7ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (1.6ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (1.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (364.5ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 841ms (Views: 415.9ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:37 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/admin/eqpgroup_edit/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 12:10:40 +1100
+  Processing by AdminController#eqpgroup_edit as HTML
+  Parameters: {"eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mEqpfamily Load (1.4ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "9"]]
+Rendered admin/eqpgroup_edit.html.erb within layouts/admin (110.1ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (4.4ms)
+  [1m[36mEqpfamily Load (1.5ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.4ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (1.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.2ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.3ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.3ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (222.4ms)
+Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 661ms (Views: 506.1ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:41 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started PUT "/admin/eqpgroup_update/9?eqpfamily_id=5" for 172.30.4.156 at 2011-12-19 12:10:48 +1100
+  Processing by AdminController#eqpgroup_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yW4IkLuehFx8CHjjXmy4Okk40y3IoLF37hcqiHK/2Tk=", "eqpgroup"=>{"name"=>"Samsung", "p1"=>"Gabarite", "p2"=>"", "p3"=>"", "p4"=>"", "description"=>"Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности.  Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.\r\nКамеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.\r\n"}, "commit"=>"Изменить", "eqpfamily_id"=>"5", "id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.4ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.4ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35m (31.3ms)[0m  UPDATE "eqpgroups" SET "description" = 'Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности. Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.
+Камеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.
+', "updated_at" = '2011-12-19 01:10:49.189898' WHERE "eqpgroups"."id" = 9
+Redirected to http://172.30.4.214:3002/admin/eqpfamily_show/5
+Completed 302 Found in 542ms
+
+
+Started GET "/admin/eqpfamily_show/5" for 172.30.4.156 at 2011-12-19 12:10:49 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mEqpfamily Load (1.5ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mEqpgroup Load (0.5ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (23.9ms)
+Rendered layouts/_stylesheets.html.erb (0.1ms)
+Rendered layouts/_adminmenu.html.erb (3.5ms)
+  [1m[35mEqpfamily Load (1.5ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.7ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqptype Load (1.8ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (1.5ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (1.3ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 4 ORDER BY indx[0m
+  [1m[35mEqptype Load (2.4ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.4ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (371.7ms)
+Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 828ms (Views: 412.2ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 12:10:50 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+Migrating to RemoveColumnDescriptionFromEqpgroup (20111219012059)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+Migrating to RemoveColumnDescriptionFromEqpgroup (20111219012059)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_eqpgroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "pn" integer, "p1" varchar(255), "p2" varchar(255), "p3" varchar(255), "p4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpfamily_id" integer, "indx" integer, "description" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqpgroups")
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "eqpgroups"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (1, '66', NULL, NULL, NULL, NULL, NULL, '2011-12-06 04:13:53.366832', '2011-12-06 04:13:53.963966', 1, 0, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (2, 'pppp', NULL, 'q', '', '', '', '2011-12-06 04:14:50.514643', '2011-12-08 05:46:23.367761', 1, 2, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (3, 'fgsdg', NULL, NULL, NULL, NULL, NULL, '2011-12-06 05:58:01.828292', '2011-12-06 05:58:02.426714', 3, 0, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (4, '565', NULL, 'Габарит', 'Температура', 'eee', '', '2011-12-07 23:04:27.714404', '2011-12-08 04:37:35.329971', 2, 0, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (5, 'Температура', NULL, 'Изменить', 'Габарит', 'уе', '', '2011-12-07 23:15:34.761433', '2011-12-07 23:15:35.309692', 2, 2, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (6, 'Халодильник', NULL, 'Параметр', '', '', '', '2011-12-08 00:24:01.616090', '2011-12-08 00:24:02.158470', 2, 4, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (7, 'asd', NULL, 'adsa', '', '', '', '2011-12-10 09:54:47.586393', '2011-12-10 09:54:48.164152', 4, 0, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (9, 'Samsung', NULL, 'Gabarite', '', '', '', '2011-12-12 04:25:00.614497', '2011-12-19 01:10:49.189898', 5, 0, 'Холодильная камера предназначена для заморозки и хранения всевозможных пищевых продуктов, фармацевтических препаратов, а также цветов и изделий из меха. Холодильные камеры выпускаются с большим спектром объемов и оснащаются холодильными моноблоками и сплит-системами различной холодопроизводительности. Холодильные камеры представляют собой сборную модульную систему из сендвич-панелей, которые с помощью специальных профилей легко соединяются между собой.
+Камеры представляют собой сборно-разборные конструкции, состоящие из «сэндвич-панелей» - стеновых, потолочных и для пола, а также, дверного блока и угловых стоек.
+')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (10, 'Кондиционер', NULL, 'Температура', 'Влажность', 'Движение', '', '2011-12-13 05:18:43.345483', '2011-12-13 05:18:43.869781', 5, 2, 'Кондиционер охлождает помещение, где находятся люди и продукты питания.
+Оснувную нагрузку кондиционеры испытывают в летнее время')
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "eqpgroups"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "eqpgroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "pn" integer, "p1" varchar(255), "p2" varchar(255), "p3" varchar(255), "p4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpfamily_id" integer, "indx" integer) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_eqpgroups")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "altered_eqpgroups"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (1, '66', NULL, NULL, NULL, NULL, NULL, '2011-12-06 04:13:53.366832', '2011-12-06 04:13:53.963966', 1, 0)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (2, 'pppp', NULL, 'q', '', '', '', '2011-12-06 04:14:50.514643', '2011-12-08 05:46:23.367761', 1, 2)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (3, 'fgsdg', NULL, NULL, NULL, NULL, NULL, '2011-12-06 05:58:01.828292', '2011-12-06 05:58:02.426714', 3, 0)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (4, '565', NULL, 'Габарит', 'Температура', 'eee', '', '2011-12-07 23:04:27.714404', '2011-12-08 04:37:35.329971', 2, 0)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (5, 'Температура', NULL, 'Изменить', 'Габарит', 'уе', '', '2011-12-07 23:15:34.761433', '2011-12-07 23:15:35.309692', 2, 2)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (6, 'Халодильник', NULL, 'Параметр', '', '', '', '2011-12-08 00:24:01.616090', '2011-12-08 00:24:02.158470', 2, 4)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (7, 'asd', NULL, 'adsa', '', '', '', '2011-12-10 09:54:47.586393', '2011-12-10 09:54:48.164152', 4, 0)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (9, 'Samsung', NULL, 'Gabarite', '', '', '', '2011-12-12 04:25:00.614497', '2011-12-19 01:10:49.189898', 5, 0)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (10, 'Кондиционер', NULL, 'Температура', 'Влажность', 'Движение', '', '2011-12-13 05:18:43.345483', '2011-12-13 05:18:43.869781', 5, 2)[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "altered_eqpgroups"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111219012059')[0m
+Migrating to Add_columnDescriptionToEqpgroup (20111219012302)
+  [1m[35m (1.2ms)[0m  ALTER TABLE "eqpgroups" ADD "description" text
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111219012302')[0m
+  [1m[35m (2.6ms)[0m  select sqlite_version(*)
+  [1m[36m (2.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
