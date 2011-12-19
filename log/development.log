@@ -35484,3 +35484,66 @@ Completed 200 OK in 669ms (Views: 462.2ms | ActiveRecord: 12.9ms)
 
 Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 172.30.4.156 at 2011-12-19 15:39:35 +1100
 Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-19 19:02:16 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (203.1ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (46.9ms)
+Completed 200 OK in 844ms (Views: 843.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-19 19:02:30 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-19 19:02:30 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 304 Not Modified (421ms)
+
+
+Started GET "/assets/blueprint/plugins/fancy-type/screen.css" for 127.0.0.1 at 2011-12-19 19:02:31 +1100
+Served asset /blueprint/plugins/fancy-type/screen.css - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-19 19:03:33 +1100
+  Processing by PagesController#main as */*
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-19 19:10:03 +1100
+  Processing by PagesController#main as */*
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (15.6ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-19 19:10:20 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
