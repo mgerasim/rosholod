@@ -35547,3 +35547,82 @@ Rendered layouts/_navmenu.html.erb (0.0ms)
 Rendered layouts/_footer.html.erb (0.0ms)
 Rendered layouts/_rosholod.html.erb (15.6ms)
 Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+Migrating to RemoveColumnDescriptionFromEqpgroup (20111219012059)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_eqpgroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "pn" integer, "p1" varchar(255), "p2" varchar(255), "p3" varchar(255), "p4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpfamily_id" integer, "indx" integer, "description" varchar(255)) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqpgroups")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "eqpgroups"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (2, 'Муфта', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:20:35.046875', '2011-12-04 07:51:15.406250', 2, 2, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (5, 'Шкаф', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:36:27.609375', '2011-12-04 07:51:15.703125', 2, 6, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (6, 'Табурет', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:37:27.046875', '2011-12-04 07:51:15.828125', 2, 8, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (7, 'Табурет', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:39:34.328125', '2011-12-04 07:51:16.093750', 2, 12, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (8, 'Стол', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:40:00.093750', '2011-12-04 07:51:15.562500', 2, 4, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (9, 'Витрина', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:40:24.015625', '2011-12-11 08:13:12.328125', 3, 0, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (10, 'Кухня', NULL, '', '', '', '', '2011-12-04 07:47:49.781250', '2011-12-13 10:46:09.203125', 2, 0, 'Элемент кухня')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (11, 'Манеж', NULL, NULL, NULL, NULL, NULL, '2011-12-04 07:51:00.046875', '2011-12-04 07:51:15.968750', 2, 10, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (12, 'Дом', NULL, 'Площадь', '', '', '', '2011-12-11 01:25:53.031250', '2011-12-11 01:25:53.421875', 2, 14, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (13, 'tret', NULL, '', '', '', '', '2011-12-11 01:59:45.531250', '2011-12-11 01:59:45.921875', 10, 0, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (14, '122', NULL, '', '', '', '', '2011-12-11 02:05:28.062500', '2011-12-11 02:05:28.390625', 11, 0, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (15, 'cfvbxcf', NULL, '', '', '', '', '2011-12-11 05:13:51.343750', '2011-12-11 05:13:52.046875', 11, 2, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (16, 'tter', NULL, '', '', '', '', '2011-12-11 05:39:01.015625', '2011-12-11 05:39:01.375000', 11, 4, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (17, 'rte', NULL, 'ert', '', '', '', '2011-12-11 05:59:26.968750', '2011-12-11 05:59:27.515625', 11, 6, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx","description") VALUES (18, 'кцеуке', NULL, 'уке', 'укцеуке', '', '', '2011-12-11 08:01:08.453125', '2011-12-11 08:01:08.984375', 7, 0, NULL)
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "eqpgroups"[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "eqpgroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "pn" integer, "p1" varchar(255), "p2" varchar(255), "p3" varchar(255), "p4" varchar(255), "created_at" datetime, "updated_at" datetime, "eqpfamily_id" integer, "indx" integer) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_eqpgroups")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_eqpgroups"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (2, 'Муфта', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:20:35.046875', '2011-12-04 07:51:15.406250', 2, 2)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (5, 'Шкаф', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:36:27.609375', '2011-12-04 07:51:15.703125', 2, 6)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (6, 'Табурет', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:37:27.046875', '2011-12-04 07:51:15.828125', 2, 8)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (7, 'Табурет', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:39:34.328125', '2011-12-04 07:51:16.093750', 2, 12)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (8, 'Стол', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:40:00.093750', '2011-12-04 07:51:15.562500', 2, 4)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (9, 'Витрина', NULL, NULL, NULL, NULL, NULL, '2011-12-03 11:40:24.015625', '2011-12-11 08:13:12.328125', 3, 0)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (10, 'Кухня', NULL, '', '', '', '', '2011-12-04 07:47:49.781250', '2011-12-13 10:46:09.203125', 2, 0)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (11, 'Манеж', NULL, NULL, NULL, NULL, NULL, '2011-12-04 07:51:00.046875', '2011-12-04 07:51:15.968750', 2, 10)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (12, 'Дом', NULL, 'Площадь', '', '', '', '2011-12-11 01:25:53.031250', '2011-12-11 01:25:53.421875', 2, 14)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (13, 'tret', NULL, '', '', '', '', '2011-12-11 01:59:45.531250', '2011-12-11 01:59:45.921875', 10, 0)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (14, '122', NULL, '', '', '', '', '2011-12-11 02:05:28.062500', '2011-12-11 02:05:28.390625', 11, 0)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (15, 'cfvbxcf', NULL, '', '', '', '', '2011-12-11 05:13:51.343750', '2011-12-11 05:13:52.046875', 11, 2)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (16, 'tter', NULL, '', '', '', '', '2011-12-11 05:39:01.015625', '2011-12-11 05:39:01.375000', 11, 4)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (17, 'rte', NULL, 'ert', '', '', '', '2011-12-11 05:59:26.968750', '2011-12-11 05:59:27.515625', 11, 6)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "eqpgroups" ("id","name","pn","p1","p2","p3","p4","created_at","updated_at","eqpfamily_id","indx") VALUES (18, 'кцеуке', NULL, 'уке', 'укцеуке', '', '', '2011-12-11 08:01:08.453125', '2011-12-11 08:01:08.984375', 7, 0)[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "altered_eqpgroups"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111219012059')[0m
+Migrating to Add_columnDescriptionToEqpgroup (20111219012302)
+  [1m[35m (0.0ms)[0m  ALTER TABLE "eqpgroups" ADD "description" text
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111219012302')[0m
+Migrating to AddAttachmentImg01ToEqpgroup (20111219042852)
+  [1m[35m (0.0ms)[0m  ALTER TABLE "eqpgroups" ADD "img01_file_name" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "eqpgroups" ADD "img01_content_type" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "eqpgroups" ADD "img01_file_size" integer
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "eqpgroups" ADD "img01_updated_at" datetime[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111219042852')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqpfamilies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqpgroups")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqps")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqptypes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("postmails")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
