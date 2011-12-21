@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   def sendmail
   
 	@postmail = Postmail.new(params[:postmail])
-	@postmail.recipient = "mgerasim.mail@gmail.com";
+	@postmail.recipient = "rosholod@rosholod.khv.ru;mgerasim.mail@gmail.com";
 	respond_to do |format|
 	    if @postmail.save
 #	    	@postmail.sendmail()

@@ -2,7 +2,7 @@
 <br>
 <p>
     <%= image_tag @eqpgroup.img01.url(:original) %>
-    <%= @eqpgroup.description %>
+    <%= raw textilize(@eqpgroup.description) %>
 </p>
 <table>
 	<% @eqpgroup.eqptypes.each do |eqptype| %>

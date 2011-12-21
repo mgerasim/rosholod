@@ -33,3 +33,18 @@ body {
 		    border:2px solid #ccc; 
 		
 		      }
+		      
+		      
+.alt {
+    color: #666;
+    font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+p.incr, .incr p {
+    font-size: 15px;
+    line-height: 1.44em;  
+    margin-bottom: 1.5em;
+}
+                                                

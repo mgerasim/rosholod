@@ -14,7 +14,7 @@
     <div id="main">
 		<div id="main_content">
 		
-    <div class="container" id="content">
+    <div class="container">
 		
 		<%= render 'layouts/header' %>
 		
@@ -23,16 +23,18 @@
 		    <h3 class="alt">Полный комплекс услуг обслуживания холодильного оборудования для магазинов и складов продуктов питания</h3>
 		</div>
 		<%= render 'layouts/navmenu' %>
-		<div id="wrapper">
+		<div id="wrapper" class="incr">
 
-			<div class="span-6 first" id="sidebar">
+			<div class="span-6 incr first" id="sidebar">
 				<ul>
 				    <%= render 'layouts/sidebarstore' %>'
 				</ul>	
 			</div>
 
-			<div id="content" class="span-17 last">			
+			<div id="content" class="span-17 last">
+			    
 			    <%= yield %>
+			
 			</div>
 		</div>
 		<%= render 'layouts/footer' %>

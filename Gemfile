@@ -47,7 +47,7 @@ end
 
 group :production, :staging do
 #  gem 'therubyracer'
-#  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'
 end
 
@@ -60,3 +60,5 @@ gem 'aws-s3', :require => 'aws/s3'
 #gem 'right_aws'
 
 gem 'pony'
+
+gem 'RedCloth'

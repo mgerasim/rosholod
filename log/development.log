@@ -35547,6 +35547,7 @@ Rendered layouts/_navmenu.html.erb (0.0ms)
 Rendered layouts/_footer.html.erb (0.0ms)
 Rendered layouts/_rosholod.html.erb (15.6ms)
 Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
   [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
 Migrating to CreateEqps (20111203063813)
 Migrating to CreateEqptypes (20111203063938)
@@ -35626,3 +35627,1335 @@ Migrating to AddAttachmentImg01ToEqpgroup (20111219042852)
   [1m[35m (0.0ms)[0m  PRAGMA index_list("eqptypes")
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("postmails")[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+=======
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+Migrating to RemoveColumnDescriptionFromEqpgroup (20111219012059)
+Migrating to Add_columnDescriptionToEqpgroup (20111219012302)
+Migrating to AddAttachmentImg01ToEqpgroup (20111219042852)
+Migrating to ChangeColumnMessageToPostmail (20111220010957)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.4ms)[0m  [1mSELECT * FROM "postmails"[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (1, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 05:07:06.033735', '2011-12-16 05:07:06.033735')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (2, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 05:37:29.583723', '2011-12-16 05:37:29.583723')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (3, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 05:41:15.582575', '2011-12-16 05:41:15.582575')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (4, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 06:00:35.089289', '2011-12-16 06:00:35.089289')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (5, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 06:00:40.922000', '2011-12-16 06:00:40.922000')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (6, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 06:10:15.640434', '2011-12-16 06:10:15.640434')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (7, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', 'Test message', '2011-12-16 06:10:41.222606', '2011-12-16 06:10:41.222606')
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "postmails"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_postmails")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "altered_postmails"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (1, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 05:07:06.033735', '2011-12-16 05:07:06.033735')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (2, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 05:37:29.583723', '2011-12-16 05:37:29.583723')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (3, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 05:41:15.582575', '2011-12-16 05:41:15.582575')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (4, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 06:00:35.089289', '2011-12-16 06:00:35.089289')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (5, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 06:00:40.922000', '2011-12-16 06:00:40.922000')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (6, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 06:10:15.640434', '2011-12-16 06:10:15.640434')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (7, 'GerasimovMN@khv.dv.rt.ru', 'Тестовая тема', 'Сидоров Иван Петрович', '4212322151', 'rosholod@rosholod.ru', '2011-12-16 06:10:41.222606', '2011-12-16 06:10:41.222606')[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "altered_postmails"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111220010957')[0m
+Migrating to AddColumnMessageToPostmails (20111220011133)
+  [1m[35m (0.9ms)[0m  ALTER TABLE "postmails" ADD "message" text
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111220011133')[0m
+  [1m[35m (1.6ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+>>>>>>> ac6d4eb3bca275dfa1e4850916dfe45f3218e826
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateEqps (20111203063813)
+Migrating to CreateEqptypes (20111203063938)
+Migrating to CreateEqpgroups (20111203064329)
+Migrating to CreateEqpfamilies (20111203064512)
+Migrating to EqpgroupAddEqpfamilyId (20111203095832)
+Migrating to EqpfamilyAddIndex (20111204043553)
+Migrating to EqpfamilyRenameIndex (20111204044712)
+Migrating to EqpgroupAddIndx (20111204072003)
+Migrating to EqptypeAddEqpgroupId (20111204073216)
+Migrating to EqptypesAddIndx (20111204075453)
+Migrating to EqpAddEqptypeId (20111204094319)
+Migrating to EqpAddIndx (20111204094356)
+Migrating to CreateUsers (20111205040605)
+Migrating to AddAttachmentImg01ToEqptype (20111209030832)
+Migrating to AddEqpgroupDescription (20111213045400)
+Migrating to CreatePostmails (20111216031351)
+Migrating to RenameRecipient (20111216051133)
+Migrating to UsersAddHashedPassword (20111216223201)
+Migrating to AddPasswordToUsers (20111217043746)
+Migrating to RemoveColumnHashedPasswordToUsers (20111217044022)
+Migrating to RemoveColumnDescriptionFromEqpgroup (20111219012059)
+Migrating to Add_columnDescriptionToEqpgroup (20111219012302)
+Migrating to AddAttachmentImg01ToEqpgroup (20111219042852)
+Migrating to ChangeColumnMessageToPostmail (20111220010957)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "message" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "postmails"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (1, 'mgerasim.mail@gmail.com', 'Тестовая тема', 'gf', 'dfh', 'fdh@dfg.dfh', 'fdh', '2011-12-16 08:52:02.015625', '2011-12-16 08:52:02.015625')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (2, 'mgerasim.mail@gmail.com', 'Тестовая тема', 'gf', 'asda@asd.ru', '342', '234', '2011-12-18 04:11:54.812500', '2011-12-18 04:11:54.812500')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (3, 'mgerasim.mail@gmail.com', 'Тестовая тема', 'sfdg', 'sdg', 'fdh@dfg.dfh', 'dfg', '2011-12-18 04:13:24.062500', '2011-12-18 04:13:24.062500')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_postmails" ("id","recipient","subject","fullname","phone","email","message","created_at","updated_at") VALUES (4, 'mgerasim.mail@gmail.com', 'Письмо руководителю', 'ads', 'asd', 'as', 'asd', '2011-12-18 04:15:57.953125', '2011-12-18 04:15:57.953125')[0m
+  [1m[35m (15.6ms)[0m  DROP TABLE "postmails"
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "postmails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "recipient" varchar(255), "subject" varchar(255), "fullname" varchar(255), "phone" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_postmails")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_postmails"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (1, 'mgerasim.mail@gmail.com', 'Тестовая тема', 'gf', 'dfh', 'fdh@dfg.dfh', '2011-12-16 08:52:02.015625', '2011-12-16 08:52:02.015625')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (2, 'mgerasim.mail@gmail.com', 'Тестовая тема', 'gf', 'asda@asd.ru', '342', '2011-12-18 04:11:54.812500', '2011-12-18 04:11:54.812500')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (3, 'mgerasim.mail@gmail.com', 'Тестовая тема', 'sfdg', 'sdg', 'fdh@dfg.dfh', '2011-12-18 04:13:24.062500', '2011-12-18 04:13:24.062500')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "postmails" ("id","recipient","subject","fullname","phone","email","created_at","updated_at") VALUES (4, 'mgerasim.mail@gmail.com', 'Письмо руководителю', 'ads', 'asd', 'as', '2011-12-18 04:15:57.953125', '2011-12-18 04:15:57.953125')[0m
+  [1m[35m (46.9ms)[0m  DROP TABLE "altered_postmails"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111220010957')[0m
+Migrating to AddColumnMessageToPostmails (20111220011133)
+  [1m[35m (0.0ms)[0m  ALTER TABLE "postmails" ADD "message" text
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111220011133')[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqpfamilies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqpgroups")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("eqps")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("eqptypes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("postmails")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 20:30:10 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (218.8ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (15.6ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (31.2ms)
+Completed 200 OK in 656ms (Views: 656.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2011-12-21 20:30:27 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1219ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-12-21 20:30:29 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:30:47 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"mgerasim@inbox.ru", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'mgerasim@inbox.ru' LIMIT 1
+Rendered login/login.html.erb within layouts/login (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 31.2ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:31:02 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"mgerasim@inbox.ru", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'mgerasim@inbox.ru' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/login (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:31:34 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"asa@asd.as", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'asa@asd.as' LIMIT 1
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 203ms
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2011-12-21 20:31:35 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (15.6ms)
+Rendered layouts/_adminmenu.html.erb (46.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (15.6ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (906.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (1062.5ms)
+Completed 200 OK in 1219ms (Views: 1140.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-12-21 20:33:54 +1100
+  Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 0ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-12-21 20:33:55 +1100
+  Processing by LoginController#login as HTML
+Rendered login/login.html.erb within layouts/login (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:33:58 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"w", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'w' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/login (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:34:01 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"w", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'w' LIMIT 1
+Rendered login/login.html.erb within layouts/login (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:34:16 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"w", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'w' LIMIT 1[0m
+Rendered login/login.html.erb within layouts/login (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (15.6ms)
+Completed 200 OK in 125ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:35:24 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"w", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'w' LIMIT 1
+Rendered login/login.html.erb within layouts/login (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodlogin.html.erb (15.6ms)
+Completed 200 OK in 78ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login/login" for 127.0.0.1 at 2011-12-21 20:35:41 +1100
+  Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "name"=>"asa@asd.as", "password"=>"[FILTERED]", "commit"=>"Регистрация"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'asa@asd.as' LIMIT 1[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 47ms
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2011-12-21 20:35:41 +1100
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (46.9ms)
+Rendered layouts/_adminmenu.html.erb (46.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (375.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (468.8ms)
+Completed 200 OK in 594ms (Views: 531.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-12-21 20:35:44 +1100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/users (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodusers.html.erb (15.6ms)
+Completed 200 OK in 62ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-12-21 20:35:48 +1100
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (0.0ms)
+Rendered users/new.html.erb within layouts/users (46.9ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodusers.html.erb (0.0ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 20:36:08 +1100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "user"=>{"name"=>"Mikahil", "email"=>"mgerasim@inbox.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Зарегистрировать пользователя"}
+  [1m[36m (0.0ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = 'mgerasim@inbox.ru' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `salt`
+  [1m[35mSQL (31.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 21 Dec 2011 09:36:09 UTC +00:00], ["email", "mgerasim@inbox.ru"], ["encrypted_password", "800601a11fdd68d258aa916e33193660fdffdeb0ac49b26eeafc8ac3dbba970f"], ["name", "Mikahil"], ["salt", "80e5515edf4d635172b8adb2dc847f41d2e795b39070254635acb730463ffce1"], ["updated_at", Wed, 21 Dec 2011 09:36:09 UTC +00:00]]
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 609ms
+
+
+Started GET "/users/8" for 127.0.0.1 at 2011-12-21 20:36:09 +1100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "8"]]
+Rendered users/show.html.erb within layouts/users (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodusers.html.erb (62.5ms)
+Completed 200 OK in 78ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-12-21 20:36:14 +1100
+  Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+Rendered admin/index.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (15.6ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (468.8ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (484.4ms)
+Completed 200 OK in 672ms (Views: 484.4ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-21 20:36:17 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (15.6ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (234.4ms)
+Completed 200 OK in 578ms (Views: 265.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_edit/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 20:36:21 +1100
+  Processing by AdminController#eqpgroup_edit as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+Rendered admin/eqpgroup_edit.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (218.8ms)
+Completed 200 OK in 453ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/admin/eqpgroup_update/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 20:36:44 +1100
+  Processing by AdminController#eqpgroup_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "eqpgroup"=>{"name"=>"Кухня", "p1"=>"", "p2"=>"", "p3"=>"", "p4"=>"", "description"=>"rtwre\r\nerter\r\nerwtert\r\newrtert\r\nertret\r\n<h1>sdgsfdg</h1>"}, "commit"=>"Изменить", "eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36m (15.6ms)[0m  [1mUPDATE "eqpgroups" SET "description" = 'rtwre
+erter
+erwtert
+ewrtert
+ertret
+<h1>sdgsfdg</h1>', "updated_at" = '2011-12-21 09:36:44.609375' WHERE "eqpgroups"."id" = 10[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/eqpfamily_show/2
+Completed 302 Found in 344ms
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-21 20:36:44 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (171.9ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (171.9ms)
+Completed 200 OK in 469ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2011-12-21 20:36:48 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (218.8ms)
+Completed 200 OK in 219ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-21 20:36:49 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (140.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (109.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (125.0ms)
+Completed 200 OK in 406ms (Views: 281.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-21 20:36:50 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/img01s/original/missing.png" for 127.0.0.1 at 2011-12-21 20:36:50 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/original/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-21 20:37:54 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+Rendered store/eqpgroup_show.html.erb within layouts/store (203.1ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (93.8ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (109.4ms)
+Completed 200 OK in 344ms (Views: 296.9ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-21 20:37:54 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/img01s/original/missing.png" for 127.0.0.1 at 2011-12-21 20:37:55 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/original/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-21 20:37:56 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (187.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (93.8ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (46.9ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (171.9ms)
+Completed 200 OK in 406ms (Views: 375.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-21 20:37:57 +1100
+
+
+Started GET "/store/eqpgroup_show/2" for 127.0.0.1 at 2011-12-21 20:51:02 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered store/eqpgroup_show.html.erb within layouts/store (562.5ms)
+Completed 500 Internal Server Error in 1703ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.index):
+    2: <br>
+    3: <p>
+    4:     <%= image_tag @eqpgroup.img01.url(:original) %>
+    5:     <%= whitelist(@eqpgroup.description) %>
+    6: </p>
+    7: <table>
+    8: 	<% @eqpgroup.eqptypes.each do |eqptype| %>
+  app/helpers/application_helper.rb:15:in `whitelist'
+  app/views/store/eqpgroup_show.html.erb:5:in `_app_views_store_eqpgroup_show_html_erb___63142822_22518240'
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/admin/eqpgroup_edit/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 20:51:10 +1100
+  Processing by AdminController#eqpgroup_edit as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+Rendered admin/eqpgroup_edit.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (734.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (750.0ms)
+Completed 200 OK in 1328ms (Views: 875.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 20:51:23 +1100
+  Processing by PagesController#main as HTML
+Rendered pages/main.html.erb within layouts/pages (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholod.html.erb (15.6ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2011-12-21 20:51:25 +1100
+  Processing by StoreController#index as HTML
+Rendered store/index.html.erb within layouts/store (0.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebarstore.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (218.8ms)
+Completed 200 OK in 234ms (Views: 234.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-21 20:51:27 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (750.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (15.6ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (46.9ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (62.5ms)
+Completed 200 OK in 859ms (Views: 828.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img01s/original/missing.png" for 127.0.0.1 at 2011-12-21 20:51:28 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/original/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-21 20:51:28 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started PUT "/admin/eqpgroup_update/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 20:59:41 +1100
+  Processing by AdminController#eqpgroup_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "eqpgroup"=>{"name"=>"Кухня", "p1"=>"", "p2"=>"", "p3"=>"", "p4"=>"", "description"=>"rtwre\r\nerter\r\nerwtert\r\n[highlight]ewrtert[/highlight]\r\nertret\r\n<h1>sdgsfdg</h1>"}, "commit"=>"Изменить", "eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (15.6ms)[0m  UPDATE "eqpgroups" SET "description" = 'rtwre
+erter
+erwtert
+[highlight]ewrtert[/highlight]
+ertret
+<h1>sdgsfdg</h1>', "updated_at" = '2011-12-21 09:59:42.187500' WHERE "eqpgroups"."id" = 10
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/eqpfamily_show/2
+Completed 302 Found in 438ms
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-21 20:59:42 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (15.6ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (156.2ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (171.9ms)
+Completed 200 OK in 625ms (Views: 218.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-21 20:59:47 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (187.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (15.6ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (109.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (125.0ms)
+Completed 200 OK in 406ms (Views: 328.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img01s/original/missing.png" for 127.0.0.1 at 2011-12-21 20:59:47 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/original/missing.png"):
+  
+
+
+
+Started GET "/admin/" for 127.0.0.1 at 2011-12-21 21:13:32 +1100
+  Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (15.6ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+Rendered admin/index.html.erb within layouts/admin (187.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (15.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (15.6ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (890.6ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (906.2ms)
+Completed 200 OK in 2297ms (Views: 1500.0ms | ActiveRecord: 78.1ms)
+
+
+Started GET "/admin/eqpfamily_edit/2" for 127.0.0.1 at 2011-12-21 21:13:50 +1100
+  Processing by AdminController#eqpfamily_edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered admin/eqpfamily_edit.html.erb within layouts/admin (62.5ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (250.0ms)
+Completed 200 OK in 375ms (Views: 312.5ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/admin/eqpgroup_show/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 21:13:53 +1100
+  Processing by AdminController#eqpgroup_show as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = 2 LIMIT 1[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpgroup_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (78.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (78.1ms)
+Completed 200 OK in 641ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-21 21:13:54 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-21 21:14:00 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (15.6ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (218.8ms)
+Completed 200 OK in 703ms (Views: 250.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/admin/eqpgroup_edit/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 21:14:01 +1100
+  Processing by AdminController#eqpgroup_edit as HTML
+  Parameters: {"eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1[0m  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+Rendered admin/eqpgroup_edit.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (15.6ms)
+  [1m[36mEqpfamily Load (0.0ms)[0m  [1mSELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebaradmin.html.erb (203.1ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (218.8ms)
+Completed 200 OK in 422ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/admin/eqpgroup_update/10?eqpfamily_id=2" for 127.0.0.1 at 2011-12-21 21:14:21 +1100
+  Processing by AdminController#eqpgroup_update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLruVrZCFktjxXjV5IdLanKFMPWCqnhNQUmAkYlLMVw=", "eqpgroup"=>{"name"=>"Кухня", "p1"=>"", "p2"=>"", "p3"=>"", "p4"=>"", "description"=>"h1. Give RedCloth a try!\r\n\r\nA *simple* paragraph with\r\na line break, some _emphasis_ and a \"link\":http://redcloth.org\r\n\r\n* an item\r\n* and another\r\n\r\n# one\r\n# two"}, "commit"=>"Изменить", "eqpfamily_id"=>"2", "id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35m (0.0ms)[0m  UPDATE "eqpgroups" SET "description" = 'h1. Give RedCloth a try!
+
+A *simple* paragraph with
+a line break, some _emphasis_ and a "link":http://redcloth.org
+
+* an item
+* and another
+
+# one
+# two', "updated_at" = '2011-12-21 10:14:21.515625' WHERE "eqpgroups"."id" = 10
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/admin/eqpfamily_show/2
+Completed 302 Found in 531ms
+
+
+Started GET "/admin/eqpfamily_show/2" for 127.0.0.1 at 2011-12-21 21:14:21 +1100
+  Processing by AdminController#eqpfamily_show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 LIMIT 1[0m
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" WHERE "eqpfamilies"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+Rendered admin/eqpfamily_show.html.erb within layouts/admin (31.2ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_adminmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 2 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 8 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 5 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 6 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 12 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 9 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 18 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 14 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 15 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 16 ORDER BY indx
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 17 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqptype Load (0.0ms)[0m  SELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 13 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx[0m
+Rendered layouts/_sidebaradmin.html.erb (109.4ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodadmin.html.erb (234.4ms)
+Completed 200 OK in 656ms (Views: 265.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/store/eqpgroup_show/10" for 127.0.0.1 at 2011-12-21 21:14:26 +1100
+  Processing by StoreController#eqpgroup_show as HTML
+  Parameters: {"id"=>"10"}
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqptype class
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."id" = ? LIMIT 1  [["id", "10"]]
+[paperclip] Duplicate URL for img01 with s3-website-ap-northeast-1.amazonaws.com. This will clash with attachment defined in Eqpgroup class
+  [1m[36mEqptype Load (0.0ms)[0m  [1mSELECT "eqptypes".* FROM "eqptypes" WHERE "eqptypes"."eqpgroup_id" = 10 ORDER BY indx[0m
+Rendered store/eqpgroup_show.html.erb within layouts/store (250.0ms)
+Rendered layouts/_stylesheets.html.erb (0.0ms)
+Rendered layouts/_header.html.erb (0.0ms)
+Rendered layouts/_navmenu.html.erb (0.0ms)
+  [1m[35mEqpfamily Load (0.0ms)[0m  SELECT "eqpfamilies".* FROM "eqpfamilies" ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 2 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 3 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 4 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 5 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 7 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 6 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 11 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 9 ORDER BY indx
+  [1m[36mEqpgroup Load (0.0ms)[0m  [1mSELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 10 ORDER BY indx[0m
+  [1m[35mEqpgroup Load (0.0ms)[0m  SELECT "eqpgroups".* FROM "eqpgroups" WHERE "eqpgroups"."eqpfamily_id" = 12 ORDER BY indx
+Rendered layouts/_sidebarstore.html.erb (62.5ms)
+Rendered layouts/_footer.html.erb (0.0ms)
+Rendered layouts/_rosholodstore.html.erb (78.1ms)
+Completed 200 OK in 359ms (Views: 328.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img01s/small/missing.png" for 127.0.0.1 at 2011-12-21 21:14:27 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/small/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/img01s/original/missing.png" for 127.0.0.1 at 2011-12-21 21:14:27 +1100
+
+ActionController::RoutingError (No route matches [GET] "/img01s/original/missing.png"):
+  
+
+Rendered development/ruby/1.9.1/gems/actionpack-3.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
