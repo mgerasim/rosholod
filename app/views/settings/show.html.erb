@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Site name:</b>
+  <%= @setting.site_name %>
+</p>
+
+<p>
+  <b>Meta keywords:</b>
+  <%= @setting.meta_keywords %>
+</p>
+
+<p>
+  <b>Meta description:</b>
+  <%= @setting.meta_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>
