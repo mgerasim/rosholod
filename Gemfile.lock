@@ -63,6 +63,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.3)
+    nokogiri (1.5.0)
+    nokogiri (1.5.0-x86-mingw32)
     paperclip (2.4.5)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
@@ -150,6 +152,10 @@ GEM
     uglifier (1.1.0)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
     xml-simple (1.1.1)
 
 PLATFORMS
@@ -175,3 +181,4 @@ DEPENDENCIES
   therubyracer-heroku (= 0.8.1.pre3)
   turn (= 0.8.2)
   uglifier (>= 1.0.3)
+  webrat

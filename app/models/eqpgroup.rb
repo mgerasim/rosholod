@@ -11,6 +11,11 @@ class Eqpgroup < ActiveRecord::Base
                    	  :s3_protocol => 'https' 
                                                	                                    
         validates_attachment_content_type :img01, :content_type => ['image/jpeg', 'image/png']
+        
+        
+	validates :meta_title, :length   => { :maximum => 150 }
+	validates :meta_description, :length   => { :maximum => 150 }
+	validates :meta_keywords, :length   => { :maximum => 150 }
 	
 	def before_save(record)
 	    record.pn = 0

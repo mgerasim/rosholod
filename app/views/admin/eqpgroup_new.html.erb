@@ -6,5 +6,8 @@
 	<p>Параметр №4: <%= form.text_field :p4, :size => 30 %></p>
         <p>Изображение №1: <%= form.file_field :img01 %></p>
 	<p>Описание: 	<%= form.text_area :description      %></p>
+	<p>Заголовок страницы: 	<%= form.text_area :meta_title      %></p>
+	<p>Описание страницы: 	<%= form.text_area :meta_description      %></p>
+	<p>Ключевае слова страницы: 	<%= form.text_area :meta_keywords      %></p>
 	<p><%= form.submit "Добавить"  %></p>
 <% end %>

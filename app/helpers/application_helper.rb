@@ -22,10 +22,22 @@ module ApplicationHelper
 
     def meta_keywords
         meta = setting.meta_keywords
+    	if @eqpgroup
+    	    if @eqpgroup.meta_keywords
+        	    meta = @eqpgroup.meta_keywords
+    	    end
+    	end
+    	meta
     end
     
     def meta_description
-	Setting.first.meta_description
+	meta = setting.meta_description
+	if @eqpgroup
+	    if @eqpgroup.meta_description
+		    meta = @eqpgroup.meta_description
+	    end
+	end
+	meta
     end
 
 end

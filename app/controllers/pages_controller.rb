@@ -1,22 +1,29 @@
 #encoding: utf-8
 class PagesController < ApplicationController
   def home
+    @title = Setting.first.title_main
+    
   end
 
   def main
+    @title = Setting.first.title_main
   end
   
   def catalog
+    @title = Setting.first.title_service
   end
   
   def price
+    @title = Setting.first.title_price
   end
   
   def contact
+    @title = Setting.first.title_contact
   end
  
   def postmail
-	@postmail = Postmail.new
+    @title = Setting.first.title_sendmail
+    @postmail = Postmail.new
   end 
   
   def sendmail

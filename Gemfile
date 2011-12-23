@@ -45,6 +45,10 @@ group :development, :test do
   gem 'annotate', '2.4.0'
 end
 
+group :test do
+    gem 'webrat'
+end
+
 group :production, :staging do
 #  gem 'therubyracer'
   gem 'therubyracer-heroku', '0.8.1.pre3'

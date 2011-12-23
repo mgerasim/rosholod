@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111222000854) do
+ActiveRecord::Schema.define(:version => 20111222234201) do
 
   create_table "eqpfamilies", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(:version => 20111222000854) do
     t.string   "img01_content_type"
     t.integer  "img01_file_size"
     t.datetime "img01_updated_at"
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.string   "meta_keywords"
   end
 
   create_table "eqps", :force => true do |t|
@@ -79,6 +82,11 @@ ActiveRecord::Schema.define(:version => 20111222000854) do
     t.string   "meta_description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title_main"
+    t.string   "title_service"
+    t.string   "title_price"
+    t.string   "title_sendmail"
+    t.string   "title_contact"
   end
 
   create_table "users", :force => true do |t|
