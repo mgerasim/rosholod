@@ -1,28 +1,36 @@
 #encoding: utf-8
 class PagesController < ApplicationController
+  
+  helper :all
+  
+  include ApplicationHelper
+
+  
   def home
-    @title = Setting.first.title_main
+    @title = setting.title_main
+    @IsRoot = 1
     
   end
 
   def main
-    @title = Setting.first.title_main
+    @title = setting.title_main
+    @IsRoot = 1
   end
   
   def catalog
-    @title = Setting.first.title_service
+    @title = setting.title_service
   end
   
   def price
-    @title = Setting.first.title_price
+    @title = setting.title_price
   end
   
   def contact
-    @title = Setting.first.title_contact
+    @title = setting.title_contact
   end
  
   def postmail
-    @title = Setting.first.title_sendmail
+    @title = setting.title_sendmail
     @postmail = Postmail.new
   end 
   

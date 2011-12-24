@@ -8,7 +8,13 @@
 			</h4>
 		    </div>
 		    <div id="logo" class="span-10 right last">
-			<% logo = image_tag("/images/rosholod_main.png", :width => "365", :height => "80", :alt => "ЗАО Росхолод-Хабаровск") %>
-			<%= link_to logo, root_path %>
+		    <% if @IsRoot.nil? %>
+		    	<% logo = image_tag("/images/rosholod_main.png", :width => "365", :height => "80", :alt => "ЗАО Росхолод-Хабаровск") %>
+		    	<%= link_to logo, root_path %>
+		    <% else %>
+		    	<%= image_tag("/images/rosholod_main.png", :width => "365", :height => "80", :alt => "ЗАО Росхолод-Хабаровск") %>
+			<% end %>
+			
+				
 		    </div>
 		</div>
