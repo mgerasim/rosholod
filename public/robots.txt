@@ -3,3 +3,19 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-Agent: *
 # Disallow: /
+
+User-Agent: Yandex
+Disallow: /admin
+Disallow: /img
+Host: dv-rosholod.ru
+
+User-Agent: Googlebot
+Disallow: /admin
+Disallow: /img
+
+User-Agent: *
+Crawl-delay: 30
+Disallow: /admin
+Disallow: /img
+
+#Sitemap: http://dv-rosholod.ru/sitemap.xml
